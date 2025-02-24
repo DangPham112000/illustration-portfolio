@@ -2,11 +2,11 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home.jsx";
-import Magic from "./components/Magic.jsx";
+import Home from "./pages/Home.jsx";
+import Magic from "./pages/Magic.jsx";
+import Life from "./pages/Life.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
-import Life from "./components/Life.jsx";
 import { NavBarProvider } from "./context/NavBarContext.jsx";
 
 createRoot(document.getElementById("root")).render(

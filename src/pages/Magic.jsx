@@ -1,54 +1,54 @@
 import React, { useEffect, useState } from "react";
 import { useNavBar } from "../context/NavBarContext";
-import ImageWithOverlay from "./ImageWithOverlay";
+import ImageWithOverlay from "../components/ImageWithOverlay";
 
 const projects = [
   {
     title: "phanthiet",
-    link: "/img/projects/PhanThiet.png",
-    img: "/img/projects/PhanThiet.png",
+    link: "/img/magics/PhanThiet.png",
+    img: "/img/magics/PhanThiet.png",
   },
   {
     title: "VuKienChauChau",
-    link: "/img/projects/VuKienChauChau.png",
-    img: "/img/projects/VuKienChauChau.png",
+    link: "/img/magics/VuKienChauChau.png",
+    img: "/img/magics/VuKienChauChau.png",
   },
   {
     title: "NguoiLayCoc",
-    link: "/img/projects/NguoiLayCoc.png",
-    img: "/img/projects/NguoiLayCoc.png",
+    link: "/img/magics/NguoiLayCoc.png",
+    img: "/img/magics/NguoiLayCoc.png",
   },
 
   {
     title: "phanthiet",
-    link: "/img/projects/PhanThiet.png",
-    img: "/img/projects/PhanThiet.png",
+    link: "/img/magics/PhanThiet.png",
+    img: "/img/magics/PhanThiet.png",
   },
   {
     title: "VuKienChauChau",
-    link: "/img/projects/VuKienChauChau.png",
-    img: "/img/projects/VuKienChauChau.png",
+    link: "/img/magics/VuKienChauChau.png",
+    img: "/img/magics/VuKienChauChau.png",
   },
   {
     title: "NguoiLayCoc",
-    link: "/img/projects/NguoiLayCoc.png",
-    img: "/img/projects/NguoiLayCoc.png",
+    link: "/img/magics/NguoiLayCoc.png",
+    img: "/img/magics/NguoiLayCoc.png",
   },
 
   {
     title: "phanthiet",
-    link: "/img/projects/PhanThiet.png",
-    img: "/img/projects/PhanThiet.png",
+    link: "/img/magics/PhanThiet.png",
+    img: "/img/magics/PhanThiet.png",
   },
   {
     title: "VuKienChauChau",
-    link: "/img/projects/VuKienChauChau.png",
-    img: "/img/projects/VuKienChauChau.png",
+    link: "/img/magics/VuKienChauChau.png",
+    img: "/img/magics/VuKienChauChau.png",
   },
   {
     title: "NguoiLayCoc",
-    link: "/img/projects/NguoiLayCoc.png",
-    img: "/img/projects/NguoiLayCoc.png",
+    link: "/img/magics/NguoiLayCoc.png",
+    img: "/img/magics/NguoiLayCoc.png",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function Magic() {
       <div className="flex flex-col items-center justify-center">
         {/* Head section */}
         <div
-          className="w-full md:bg-[url('/img/Magic_castles.png')] bg-white bg-cover bg-center"
+          className="w-full md:bg-[url('/img/background/Magic_castles.png')] bg-white bg-cover bg-center"
           style={{ height: `${headSectionHeight}px` }}
         >
           <div className="relative top-56 left-[110px] w-[462px]">

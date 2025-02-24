@@ -3,41 +3,41 @@ import { motion } from "framer-motion";
 const images = [
   {
     title: "phanthiet",
-    src: "/img/projects/PhanThiet.png",
+    src: "/img/magics/PhanThiet.png",
   },
   {
     title: "VuKienChauChau",
-    src: "/img/projects/VuKienChauChau.png",
+    src: "/img/magics/VuKienChauChau.png",
   },
   {
     title: "NguoiLayCoc",
-    src: "/img/projects/NguoiLayCoc.png",
+    src: "/img/magics/NguoiLayCoc.png",
   },
 
   {
     title: "phanthiet",
-    src: "/img/projects/PhanThiet.png",
+    src: "/img/magics/PhanThiet.png",
   },
   {
     title: "VuKienChauChau",
-    src: "/img/projects/VuKienChauChau.png",
+    src: "/img/magics/VuKienChauChau.png",
   },
   {
     title: "NguoiLayCoc",
-    src: "/img/projects/NguoiLayCoc.png",
+    src: "/img/magics/NguoiLayCoc.png",
   },
 
   {
     title: "phanthiet",
-    src: "/img/projects/PhanThiet.png",
+    src: "/img/magics/PhanThiet.png",
   },
   {
     title: "VuKienChauChau",
-    src: "/img/projects/VuKienChauChau.png",
+    src: "/img/magics/VuKienChauChau.png",
   },
   {
     title: "NguoiLayCoc",
-    src: "/img/projects/NguoiLayCoc.png",
+    src: "/img/magics/NguoiLayCoc.png",
   },
 ];
 

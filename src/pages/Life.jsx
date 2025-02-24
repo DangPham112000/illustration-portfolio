@@ -1,9 +1,11 @@
 import React from "react";
-import ImageSlider from "./ImageSlider";
+import ImageSlider from "../components/ImageSlider";
+import Line from "../components/Line";
 
 export default function Life() {
   return (
     <>
+      <Line />
       <div className="flex flex-col items-center justify-center">
         {/* Introduce */}
         <div className="flex flex-col items-start justify-center px-[130px] py-20 w-full">

@@ -7,7 +7,7 @@ export default function About() {
         <div className="flex justify-between items-center px-[60px] gap-10">
           <img
             className="object-cover w-[449px] h-[449px]"
-            src="/img/projects/NguoiLayCoc.png"
+            src="/img/magics/NguoiLayCoc.png"
             alt="NguoiLayCoc"
           />
           <div className="flex flex-col gap-10">

@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavigationMobile from "./NavigationMobile";
 import { useNavBar } from "../context/NavBarContext";
+import getCurrentPath from "../utils/getCurrentPath";
+import Line from "./Line";
 
 const menuList = [
   {
@@ -33,6 +35,7 @@ const menuList = [
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(getCurrentPath());
   const navRef = useRef(null);
   const { updateNavBarHeight } = useNavBar();
 
@@ -41,6 +44,10 @@ export default function Navigation() {
       updateNavBarHeight(navRef.current.offsetHeight);
     }
   }, [updateNavBarHeight]);
+
+  const changePageHandling = (link) => {
+    setCurrentPage(link);
+  }
 
   return (
     <>
@@ -59,10 +66,11 @@ export default function Navigation() {
               <ul className="flex items-center gap-6">
                 {menuList.map((item) => {
                   return (
-                    <li key={item.id}>
+                    <li key={item.id} onClick={() => changePageHandling(item.link)}>
                       <Link
                         to={item.link}
                         className="inline-block text-gray-600 text-base xl:text-base py-1 px-2 xl:px-3 hover:text-secondary hover:font-bold transition-all duration-300 font-normal"
+                        style={{'textDecoration': currentPage === item.link ? 'underline' : ''}}
                       >
                         {item.title}
                       </Link>
@@ -78,14 +86,14 @@ export default function Navigation() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/img/Facebook.svg" alt="Facebook" />
+                  <img src="/img/icons/Facebook.svg" alt="Facebook" />
                 </a>
                 <a
                   href="https://www.example.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/img/Insta.svg" alt="Insta" />
+                  <img src="/img/icons/Insta.svg" alt="Insta" />
                 </a>
               </div>
             </div>
@@ -95,7 +103,7 @@ export default function Navigation() {
             className="lg:hidden sm:block"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <img src="/img/Hamburger-iphone.svg" alt="Hamburger-iphone" />
+            <img src="/img/icons/Hamburger-iphone.svg" alt="Hamburger-iphone" />
           </div>
         </div>
       </nav>
