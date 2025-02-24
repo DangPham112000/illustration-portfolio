@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Line from "./Line";
+import { useNavBar } from "../context/NavBarContext";
+import { HashLink } from "react-router-hash-link";
 
 export default function About() {
+  const { navBarHeight } = useNavBar();
+
+  const [headSectionHeight, setHeadSectionHeight] = useState(0);
+
+  useEffect(() => {
+    const height = window.innerHeight - navBarHeight;
+    setHeadSectionHeight(height);
+  }, [navBarHeight]);
+
   return (
     <>
-      <div className="mb-auto mt-[160px]">
-        <div className="flex justify-between items-center px-[60px] gap-10">
+      <Line />
+      <div
+        className="relative flex justify-center items-center"
+        style={{ height: `${headSectionHeight}px` }}
+      >
+        <div className="flex justify-center px-[60px] gap-[50px]">
           <img
             className="object-cover w-[449px] h-[449px]"
-            src="/img/magics/NguoiLayCoc.png"
+            src="/img/aboutme.png"
             alt="NguoiLayCoc"
           />
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-5 w-[572px]">
             <p>Hello!</p>
             <p>
               I'm Ngoc Vo, a Graphic Designer, Illustrator, and now, a rising
@@ -34,6 +50,9 @@ export default function About() {
             </p>
           </div>
         </div>
+        <HashLink to="#contact" className="absolute right-[50px] bottom-[30px]">
+          <img src="/img/icons/jump_down.svg" alt="jump_down" />
+        </HashLink>
       </div>
     </>
   );

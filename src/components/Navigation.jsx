@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import NavigationMobile from "./NavigationMobile";
 import { useNavBar } from "../context/NavBarContext";
 import getCurrentPath from "../utils/getCurrentPath";
-import Line from "./Line";
+import { HashLink } from "react-router-hash-link";
 
 const menuList = [
   {
@@ -24,12 +24,12 @@ const menuList = [
   {
     id: "about",
     title: "About",
-    link: "/about",
+    link: "/abco",
   },
   {
     id: "contact",
     title: "Contact",
-    link: "/contact",
+    link: "/abco#contact",
   },
 ];
 
@@ -67,13 +67,13 @@ export default function Navigation() {
                 {menuList.map((item) => {
                   return (
                     <li key={item.id} onClick={() => changePageHandling(item.link)}>
-                      <Link
+                      <HashLink
                         to={item.link}
                         className="inline-block text-gray-600 text-base xl:text-base py-1 px-2 xl:px-3 hover:text-secondary hover:font-bold transition-all duration-300 font-normal"
                         style={{'textDecoration': currentPage === item.link ? 'underline' : ''}}
                       >
                         {item.title}
-                      </Link>
+                      </HashLink>
                     </li>
                   );
                 })}
