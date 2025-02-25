@@ -1,7 +1,11 @@
 import React from "react";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
-export default function Contact() {
+export default function Contact({ aboutRef }) {
+  const toAboutHandling = () => {
+    aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <div className="relative flex flex-col h-[100vh] justify-between items-center bg-[url('/img/background/Contact_desktop.png')] bg-cover bg-center">
@@ -22,9 +26,13 @@ export default function Contact() {
           <p className="italic text-[17px]">I am happy to hear from you :)</p>
         </div>
 
-        <HashLink to="#about" className="absolute right-[50px] bottom-[30px]">
+        <Link
+          to="#about"
+          onClick={toAboutHandling}
+          className="absolute right-[50px] bottom-[30px]"
+        >
           <img src="/img/icons/jump_up.svg" alt="jump_up" />
-        </HashLink>
+        </Link>
       </div>
     </>
   );

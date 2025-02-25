@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Line from "./Line";
 import { useNavBar } from "../context/NavBarContext";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
-export default function About() {
+export default function About({contactRef}) {
   const { navBarHeight } = useNavBar();
 
   const [headSectionHeight, setHeadSectionHeight] = useState(0);
+
+  const toContactHandling = () => {
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
+  }
 
   useEffect(() => {
     const height = window.innerHeight - navBarHeight;
@@ -50,9 +54,9 @@ export default function About() {
             </p>
           </div>
         </div>
-        <HashLink to="#contact" className="absolute right-[50px] bottom-[30px]">
+        <Link to="#contact" onClick={toContactHandling} className="absolute right-[50px] bottom-[30px]">
           <img src="/img/icons/jump_down.svg" alt="jump_down" />
-        </HashLink>
+        </Link>
       </div>
     </>
   );

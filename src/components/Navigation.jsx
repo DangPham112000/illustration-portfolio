@@ -51,10 +51,10 @@ export default function Navigation() {
 
   return (
     <>
-      <nav ref={navRef} className="nav w-full">
-        <div className="container flex justify-between items-center py-6 mx-auto">
+      <nav ref={navRef} className="w-full">
+        <div className="flex justify-between items-center py-6 pl-[60px] pr-[30px] mx-auto">
           {/* Page name */}
-          <div className="text-3xl flex items-center">
+          <div className="text-[32px] flex items-center">
             <Link to="/" className="font-medium">
               <p>Ngoc Vo</p>
             </Link>
@@ -62,17 +62,19 @@ export default function Navigation() {
 
           {/* Left nav */}
           <div className="hidden lg:block ">
-            <div className="flex justify-between items-center gap-6">
-              <ul className="flex items-center gap-6">
+            <div className="flex justify-between items-center gap-[50px]">
+
+              {/* Link */}
+              <ul className="flex items-center gap-[40px]">
                 {menuList.map((item) => {
                   return (
                     <li key={item.id} onClick={() => changePageHandling(item.link)}>
                       <HashLink
                         to={item.link}
-                        className="inline-block text-gray-600 text-base xl:text-base py-1 px-2 xl:px-3 hover:text-secondary hover:font-bold transition-all duration-300 font-normal"
+                        className="flex justify-center w-16 text-base xl:text-base py-1 hover:text-secondary hover:font-bold transition-all duration-300"
                         style={{'textDecoration': currentPage === item.link ? 'underline' : ''}}
                       >
-                        {item.title}
+                        <p>{item.title}</p>
                       </HashLink>
                     </li>
                   );
@@ -80,7 +82,7 @@ export default function Navigation() {
               </ul>
 
               {/* Social icons */}
-              <div className="flex space-x-6">
+              <div className="flex gap-4">
                 <a
                   href="https://www.example.com"
                   target="_blank"

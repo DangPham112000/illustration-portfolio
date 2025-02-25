@@ -22,7 +22,7 @@ export default function Life() {
         </div>
 
         {/* <ImageSlider/> */}
-        <div className="h-[326px] w-full bg-gray-700"></div>
+        <div className="h-[300px] w-full bg-gray-700"></div>
 
         {/* Copyright */}
         <div className="text-center mb-4 mt-20">
