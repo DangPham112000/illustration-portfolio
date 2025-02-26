@@ -1,5 +1,4 @@
 import React from "react";
-import ImageSlider from "../components/ImageSlider";
 import Line from "../components/Line";
 
 export default function Life() {

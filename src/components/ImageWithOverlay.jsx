@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Vibrant } from "node-vibrant/browser";
+import { Link } from "react-router-dom";
 
-const ImageWithOverlay = ({ imageUrl, imageTitle, projectLink }) => {
+const ImageWithOverlay = ({ imageUrl, imageTitle, imageId }) => {
   const imgRef = useRef(null);
   const [mainColor, setMainColor] = useState("rgba(0, 0, 0, 0)");
 
@@ -36,18 +37,21 @@ const ImageWithOverlay = ({ imageUrl, imageTitle, projectLink }) => {
   };
 
   return (
-    <a href={projectLink} className="relative group h-full w-full">
+    <Link
+      to={`/magicDetail/${imageId}`}
+      className="relative group h-full w-full"
+    >
       <img
         ref={imgRef}
         src={imageUrl}
-        alt={imageTitle}
+        alt={imageId}
         className="object-cover h-full w-full"
       />
       <div
         className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
         style={{ backgroundColor: mainColor }}
       />
-    </a>
+    </Link>
   );
 };
 

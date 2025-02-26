@@ -1,57 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavBar } from "../context/NavBarContext";
 import ImageWithOverlay from "../components/ImageWithOverlay";
-import { Link } from "react-router-dom";
+import magicCollection from "../data/magicCollection";
 
-const projects = [
-  {
-    title: "phanthiet",
-    link: "/img/magics/PhanThiet.png",
-    img: "/img/magics/PhanThiet.png",
-  },
-  {
-    title: "VuKienChauChau",
-    link: "/img/magics/VuKienChauChau.png",
-    img: "/img/magics/VuKienChauChau.png",
-  },
-  {
-    title: "NguoiLayCoc",
-    link: "/img/magics/NguoiLayCoc.png",
-    img: "/img/magics/NguoiLayCoc.png",
-  },
-
-  {
-    title: "phanthiet",
-    link: "/img/magics/PhanThiet.png",
-    img: "/img/magics/PhanThiet.png",
-  },
-  {
-    title: "VuKienChauChau",
-    link: "/img/magics/VuKienChauChau.png",
-    img: "/img/magics/VuKienChauChau.png",
-  },
-  {
-    title: "NguoiLayCoc",
-    link: "/img/magics/NguoiLayCoc.png",
-    img: "/img/magics/NguoiLayCoc.png",
-  },
-
-  {
-    title: "phanthiet",
-    link: "/img/magics/PhanThiet.png",
-    img: "/img/magics/PhanThiet.png",
-  },
-  {
-    title: "VuKienChauChau",
-    link: "/img/magics/VuKienChauChau.png",
-    img: "/img/magics/VuKienChauChau.png",
-  },
-  {
-    title: "NguoiLayCoc",
-    link: "/img/magics/NguoiLayCoc.png",
-    img: "/img/magics/NguoiLayCoc.png",
-  },
-];
 
 export default function Magic() {
   const { navBarHeight } = useNavBar();
@@ -107,16 +58,16 @@ export default function Magic() {
         <div className="container m-auto py-10 px-0" ref={collectionRef}>
           <div className="flex items-center justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 xl:w-[1156px] sm:w-[764px]">
-              {projects.map((item, index) => {
+              {magicCollection.map((item, index) => {
                 return (
                   <div
                     key={index}
                     className="flex items-center justify-center w-[372px] h-[372px]"
                   >
                     <ImageWithOverlay
-                      imageUrl={item.img}
+                      imageUrl={item.priImg}
                       imageTitle={item.title}
-                      projectLink={item.link}
+                      imageId={item.id}
                     />
                   </div>
                 );
