@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import ModalSlider from "./ModalSlider";
 
 export default function MagicSlider({
   imgSrcs = [],
@@ -7,19 +7,22 @@ export default function MagicSlider({
   autoSlideInterval = 1000,
 }) {
   const [currentIndexSlide, setCurrentIndexSlide] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalIndex, setModalIndex] = useState(0);
+
+  const openModal = (index) => {
+    setModalIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const nextHandling = () => {
     setCurrentIndexSlide((currentIndexSlide) =>
       currentIndexSlide + 1 === imgSrcs.length ? 0 : currentIndexSlide + 1
     );
-  };
-
-  const prevHandling = () => {
-    if (currentIndexSlide === 0) {
-      setCurrentIndexSlide(imgSrcs.length - 1);
-      return;
-    }
-    setCurrentIndexSlide(currentIndexSlide - 1);
   };
 
   const goToIndex = (index) => {
@@ -38,24 +41,15 @@ export default function MagicSlider({
     <div className="relative h-full">
       <div className="h-[90%]">
         <div
+          className="w-full h-full bg-center bg-cover duration-500 cursor-pointer"
           style={{
             backgroundImage: `url(${imgSrcs[currentIndexSlide]})`,
           }}
-          className="w-full h-full bg-center bg-cover duration-500"
-        ></div>
+          onClick={() => openModal(currentIndexSlide)}
+        />
       </div>
 
-      {/* arrow */}
-      {/* <div className="absolute inset-0 flex items-center justify-between p-4">
-        <button className="p-1 rounded-full" onClick={prevHandling}>
-          <BiChevronLeft size={60} />
-        </button>
-        <button className="p-1 rounded-full" onClick={nextHandling}>
-          <BiChevronRight size={60} />
-        </button>
-      </div> */}
-
-      {/* Dot */}
+      {/* Dots */}
       {imgSrcs.length > 1 && (
         <div className="absolute right-0 left-0 bottom-4">
           <div className="flex items-center justify-center gap-2">
@@ -72,6 +66,10 @@ export default function MagicSlider({
             ))}
           </div>
         </div>
+      )}
+
+      {isModalOpen && (
+        <ModalSlider onClose={closeModal} index={modalIndex} images={imgSrcs} />
       )}
     </div>
   );
