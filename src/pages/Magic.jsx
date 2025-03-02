@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavBar } from "../context/NavBarContext";
 import ImageWithOverlay from "../components/ImageWithOverlay";
 import magicCollection from "../data/magicCollection";
+import Copyright from "../components/Copyright";
 
 
 export default function Magic() {
@@ -57,7 +58,7 @@ export default function Magic() {
         {/* Collection section */}
         <div className="container m-auto py-10 px-0" ref={collectionRef}>
           <div className="flex items-center justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 xl:w-[1156px] sm:w-[764px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 xl:w-[1156px] lg:w-[764px] 2xl:w-[1548px]">
               {magicCollection.map((item, index) => {
                 return (
                   <div
@@ -78,7 +79,7 @@ export default function Magic() {
 
         {/* Copyright */}
         <div className="mt-auto text-center mb-4">
-          <p>Copyright @2025 ghfkahgkuahdguad</p>
+          <Copyright />
         </div>
         <div
           onClick={toHeadHandling}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Copyright from "./Copyright";
 
 export default function Contact({ aboutRef }) {
   const toAboutHandling = () => {
@@ -12,7 +13,7 @@ export default function Contact({ aboutRef }) {
         <div className="opacity-0"></div>
 
         <div className="text-center mb-4">
-          <p>Copyright @2025 ghfkahgkuahdguad</p>
+          <Copyright />
         </div>
         <div className="absolute flex flex-col justify-center top-[114px] right-[246px]">
           <h3 className="text-[28px]">Hello!</h3>

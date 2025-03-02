@@ -1,4 +1,5 @@
 import React from "react";
+import Copyright from "../components/Copyright";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
           </p>
         </div>
         <div className="mt-auto text-center mb-4">
-          <p>Copyright @2025 ghfkahgkuahdguad</p>
+          <Copyright />
         </div>
       </div>
     </>

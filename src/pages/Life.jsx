@@ -1,5 +1,6 @@
 import React from "react";
 import Line from "../components/Line";
+import Copyright from "../components/Copyright";
 
 export default function Life() {
   return (
@@ -25,7 +26,7 @@ export default function Life() {
 
         {/* Copyright */}
         <div className="text-center mb-4 mt-20">
-          <p>Copyright @2025 ghfkahgkuahdguad</p>
+          <Copyright />
         </div>
       </div>
     </>
