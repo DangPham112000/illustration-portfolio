@@ -72,4 +72,156 @@ But when the winter passes, the butterflies fly far away. The pot is so upset, a
       "/img/magicDetail/p5/ngu-trong-hoa.jpg",
     ],
   },
+
+  {
+    id: "p6",
+    title: "Fly higher, Dad!",
+    description: `Remembering my childhood, when I could fly with my Dad's legs haha. Such a sweet memory!`,
+    priImg: "/img/magicDetail/p6/Ba-va-Con-gai.jpg",
+    imgs: ["/img/magicDetail/p6/Ba-va-Con-gai.jpg"],
+  },
+
+  {
+    id: "p7",
+    title: "Mom, how to cook?",
+    description: `Mom always tells us how to cook a good dish. Though sometimes, she is quite talkative. Love you, Mom! <3`,
+    priImg: "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+    imgs: [
+      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
+      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
+      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
+    ],
+  },
+
+  {
+    id: "p8",
+    title: "You are my princess.",
+    description: `When I was very young, my brother loved to play with my curly hair using colorful hair elastics… I was not so sure if I looked good on them. Was I his princess or just a messy little girl? Haha`,
+    priImg: "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+    imgs: [
+      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
+      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
+      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
+    ],
+  },
+
+  {
+    id: "p9",
+    title: "Ocean sunrise, we are paddling!",
+    description: `Waking up at 5 am, I and my younger sister were going kayaking for the first time. Sunrise by the ocean is absolutely glorious!`,
+    priImg: "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+    imgs: [
+      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
+      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
+      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
+    ],
+  },
+
+  {
+    id: "p10",
+    title: "A Children's Party",
+    description: `Hands clap!
+Fingers snap!
+Feet tap!
+…
+`,
+    priImg: "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+    imgs: [
+      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
+      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
+      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
+    ],
+  },
+
+  {
+    id: "p11",
+    title: "The Crocodile",
+    description: `How doth the little crocodile
+Improve his shining tail,
+And pour the waters of the Nile
+On every golden scale!
+How cheerfully he seems to grin,
+How neatly spreads his claws,
+And welcomes little fishes in,
+With gently smiling jaws!
+
+                          Lewis Carroll (1832 - 1898)
+`,
+    priImg: "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+    imgs: [
+      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
+      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
+      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
+    ],
+  },
+
+  {
+    id: "p12",
+    title: "Baby Dragon",
+    description: `Rumour has it that dragons destroy the harvest. It may be the first time kids have ever seen this animal. Kids are told to stay away from them, but they are naughty. They make plans to play some tricks on the baby dragon. Is the baby dragon as scary as rumours?`,
+    priImg: "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+    imgs: [
+      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
+      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
+      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
+    ],
+  },
+
+  {
+    id: "p13",
+    title: "Mom, rain(drop) is on your shoulder!",
+    description: `Revised: Nora is going for a walk with her mommy when it suddenly rains. “Oh, look! Raindrops are falling on your shoulder, Mommy!” the cute little girl wondered. Can Nora realize why the raindrops are only on her mom's shoulder?`,
+    priImg: "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+    imgs: [
+      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
+      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
+      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
+    ],
+  },
+
+  {
+    id: "p14",
+    title: "Mouse on my head",
+    description: `Little boy is playing happily in his room which is full of nice toys. He is so excited until he realized there was a mouse sitting on his head? How can????`,
+    priImg: "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+    imgs: [
+      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
+      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
+      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
+    ],
+  },
+
+  {
+    id: "p15",
+    title: "The rescue",
+    description: `A boy was taken back to his hometown, a beautiful countryside, for a summer vacation. There, he unexpectedly met a little girl who turned out to be the princess of the jungle. But tragedy struck when she was kidnapped by a wicked man who tried to destroy the entire forest as he passed through. The jungle princess was imprisoned and her magical powers were then cruelly stolen. Can the little boy find the way to save her and protect the forest in the end?`,
+    priImg: "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+    imgs: [
+      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
+      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
+      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
+    ],
+  },
+
+  {
+    id: "p16",
+    title: "Flowers and us",
+    description: `Yay yay yay! Let's go pick some flowers. Harvest season is here!`,
+    priImg: "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+    imgs: [
+      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
+      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
+      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
+      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
+    ],
+  },
 ];

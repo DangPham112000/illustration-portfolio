@@ -20,11 +20,18 @@ export default function ModalSlider({
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-between z-50">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-80 flex items-center z-50"
+      style={{
+        justifyContent: images.length > 1 ? "space-between" : "center",
+      }}
+    >
       {/* Left btn */}
-      <button className="m-[50px]" onClick={handlePrev}>
-        <img src="/img/icons/white_slide_left.svg" alt="white_slide_left" />
-      </button>
+      {images.length > 1 && (
+        <button className="m-[50px]" onClick={handlePrev}>
+          <img src="/img/icons/white_slide_left.svg" alt="white_slide_left" />
+        </button>
+      )}
       {/* IMG */}
       <div className="relative">
         <img
@@ -34,9 +41,11 @@ export default function ModalSlider({
         />
       </div>
       {/* Right btn */}
-      <button className="m-[50px]" onClick={handleNext}>
-        <img src="/img/icons/white_slide_right.svg" alt="white_slide_right" />
-      </button>
+      {images.length > 1 && (
+        <button className="m-[50px]" onClick={handleNext}>
+          <img src="/img/icons/white_slide_right.svg" alt="white_slide_right" />
+        </button>
+      )}
 
       {/* Close btn */}
       <button className="absolute top-0 right-0 m-4" onClick={onClose}>

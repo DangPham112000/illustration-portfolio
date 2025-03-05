@@ -47,7 +47,7 @@ export default function Navigation() {
 
   const changePageHandling = (link) => {
     setCurrentPage(link);
-  }
+  };
 
   return (
     <>
@@ -55,7 +55,11 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-6 pl-[60px] pr-[30px] mx-auto">
           {/* Page name */}
           <div className="text-[32px] flex items-center">
-            <Link to="/" className="font-medium">
+            <Link
+              to="/"
+              onClick={() => changePageHandling("/")}
+              className="font-medium"
+            >
               <p>Ngoc Vo</p>
             </Link>
           </div>
@@ -63,16 +67,27 @@ export default function Navigation() {
           {/* Left nav */}
           <div className="hidden lg:block ">
             <div className="flex justify-between items-center gap-[50px]">
-
               {/* Link */}
               <ul className="flex items-center gap-[40px]">
                 {menuList.map((item) => {
                   return (
-                    <li key={item.id} onClick={() => changePageHandling(item.link)}>
+                    <li
+                      key={item.id}
+                      onClick={() => changePageHandling(item.link)}
+                    >
                       <HashLink
                         to={item.link}
                         className="flex justify-center w-16 text-base xl:text-base py-1 hover:text-secondary hover:font-bold transition-all duration-300"
-                        style={{'textDecoration': currentPage === item.link ? 'underline' : ''}}
+                        style={
+                          currentPage === item.link
+                            ? {
+                                TwTextOpacity: "1",
+                                color:
+                                  "rgb(30 152 209 / var(--tw-text-opacity, 1))",
+                                fontWeight: "700",
+                              }
+                            : {}
+                        }
                       >
                         <p>{item.title}</p>
                       </HashLink>
