@@ -9,28 +9,28 @@ export default function Contact({ aboutRef }) {
 
   return (
     <>
-      <div className="relative flex flex-col h-[100vh] justify-between items-center bg-[url('/img/background/Contact_desktop.png')] bg-cover bg-center">
-        <div className="opacity-0"></div>
+      <div className="relative flex flex-col h-[100vh] justify-between items-center sm:bg-[url('/img/background/Contact_desktop.png')] bg-[url('/img/background/contact_mobile.png')] bg-cover bg-center">
+        <div className="sm:block hidden opacity-0"></div>
 
-        <div className="text-center mb-4">
+        <div className="sm:block hidden text-center mb-4">
           <Copyright />
         </div>
-        <div className="absolute flex flex-col justify-center top-[114px] right-[246px]">
-          <h3 className="text-[28px]">Hello!</h3>
-          <p className="text-[17px]">
+        <div className="sm:absolute flex flex-col justify-center xl:top-[114px] xl:right-[246px] mt-[54px] mx-[38px]">
+          <h3 className="sm:text-[28px] text-[24px]">Hello!</h3>
+          <p className="sm:text-[17px] text-[16px]">
             For commissions and project inquiries, please email to:
           </p>
-          <h3 className="font-semibold text-[28px]">
+          <h3 className="font-semibold sm:text-[28px] text-[20px]">
             ngoc.vo.illustration@gmail.com
           </h3>
           <div className="p-0 my-[20px] h-[1px] w-[78px] bg-black"></div>
-          <p className="italic text-[17px]">I am happy to hear from you :)</p>
+          <p className="italic sm:text-[17px] text-[16px]">I am happy to hear from you :)</p>
         </div>
 
         <Link
           to="#about"
           onClick={toAboutHandling}
-          className="absolute right-[50px] bottom-[30px]"
+          className="sm:block hidden absolute right-[50px] bottom-[30px]"
         >
           <img src="/img/icons/jump_up.svg" alt="jump_up" />
         </Link>

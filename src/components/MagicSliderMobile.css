@@ -1,0 +1,12 @@
+.swiper-slide {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.swiper-slide:first-child {
+  margin-left: 40px;
+}
+
+.swiper-slide:last-child {
+  margin-right: 40px;
+}

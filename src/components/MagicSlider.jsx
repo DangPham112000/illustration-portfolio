@@ -4,7 +4,7 @@ import ModalSlider from "./ModalSlider";
 export default function MagicSlider({
   imgSrcs = [],
   autoSlide = false,
-  autoSlideInterval = 1000,
+  autoSlideInterval = 2000,
 }) {
   const [currentIndexSlide, setCurrentIndexSlide] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,9 +20,9 @@ export default function MagicSlider({
   };
 
   const nextHandling = () => {
-    setCurrentIndexSlide((currentIndexSlide) =>
-      currentIndexSlide + 1 === imgSrcs.length ? 0 : currentIndexSlide + 1
-    );
+    setCurrentIndexSlide((prevIndexSlide) => {
+      return prevIndexSlide + 1 === imgSrcs.length ? 0 : prevIndexSlide + 1;
+    });
   };
 
   const goToIndex = (index) => {
@@ -35,7 +35,7 @@ export default function MagicSlider({
     return () => {
       clearInterval(slideInterval);
     };
-  }, []);
+  }, [imgSrcs]);
 
   return (
     <div className="relative h-full">
@@ -51,7 +51,7 @@ export default function MagicSlider({
 
       {/* Dots */}
       {imgSrcs.length > 1 && (
-        <div className="absolute right-0 left-0 bottom-4">
+        <div className="absolute right-0 left-0 lg:bottom-4 md:bottom-0">
           <div className="flex items-center justify-center gap-2">
             {imgSrcs.map((_, index) => (
               <div

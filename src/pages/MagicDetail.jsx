@@ -4,6 +4,7 @@ import magicCollection from "../data/magicCollection";
 import Line from "../components/Line";
 import MagicSlider from "../components/MagicSlider";
 import { Link } from "react-router-dom";
+import MagicSliderMobile from "../components/MagicSliderMobile";
 
 export default function MagicDetail() {
   let { id } = useParams();
@@ -31,30 +32,44 @@ export default function MagicDetail() {
   return (
     <>
       <Line />
-      <div className="flex-1">
-        <div className="grid grid-cols-2 px-[60px] py-[60px] gap-[50px] h-full">
-          {/* Slider */}
-          <MagicSlider autoSlide={false} imgSrcs={magicItem.imgs} />
+      <div className="flex flex-col md:flex-1 h-full">
+        <div className="lg:grid lg:grid-cols-2 md:gap-[50px] flex flex-col items-start justify-start md:px-[60px] md:py-[60px]  md:h-full">
+          {/* Ipad - Desktop Slider */}
+          <div className="lg:block hidden w-full h-full">
+            <MagicSlider autoSlide={false} imgSrcs={magicItem.imgs} />
+          </div>
 
           {/* Content */}
-          <div className="flex flex-col items-start">
-            <h2 className="font-semibold text-[32px] w-[364px] mb-[30px]">
+          <div className="flex flex-col items-start py-[30px] px-10 md:py-0 md:px-0 w-full">
+            <h2 className="font-semibold text-[32px] w-[364px] md:mb-[30px] mb-5">
               {magicItem.title}
             </h2>
-            <pre className="mb-[60px] text-[17px] whitespace-pre-wrap font-[Inter]">
+            <pre className="md:mb-[60px] mb-[40px] text-[17px] whitespace-pre-wrap font-[Inter]">
               {magicItem.description}
             </pre>
-            <Link
-              to={`/magicDetail/${
-                currentIndex + 1 === magicCollection.length
-                  ? magicCollection[0].id
-                  : magicCollection[currentIndex + 1].id
-              }`}
-              className="text-[24px]"
-              onClick={nextHandling}
-            >
-              {`Next ->`}
-            </Link>
+            <div className="w-full flex justify-end lg:justify-start">
+              <Link
+                to={`/magicDetail/${
+                  currentIndex + 1 === magicCollection.length
+                    ? magicCollection[0].id
+                    : magicCollection[currentIndex + 1].id
+                }`}
+                className="text-[24px]"
+                onClick={nextHandling}
+              >
+                {`Next ->`}
+              </Link>
+            </div>
+          </div>
+
+          {/* Ipad Slider */}
+          <div className="md:block hidden lg:hidden w-full h-full">
+            <MagicSlider autoSlide={true} imgSrcs={magicItem.imgs} />
+          </div>
+
+          {/* Mobile Slider */}
+          <div className="md:hidden block w-full h-full">
+            <MagicSliderMobile imgSrcs={magicItem.imgs} />
           </div>
         </div>
       </div>

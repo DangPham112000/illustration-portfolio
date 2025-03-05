@@ -50,11 +50,11 @@ export default function Navigation() {
   };
 
   return (
-    <>
+    <div className="relative">
       <nav ref={navRef} className="w-full">
-        <div className="flex justify-between items-center py-6 pl-[60px] pr-[30px] mx-auto">
+        <div className="flex justify-between items-center sm:py-6 py-[13px] sm:pl-[60px] pl-10 sm:pr-[30px] pr-5 mx-auto">
           {/* Page name */}
-          <div className="text-[32px] flex items-center">
+          <div className="lg:text-[32px] text-[24px] flex items-center">
             <Link
               to="/"
               onClick={() => changePageHandling("/")}
@@ -116,15 +116,36 @@ export default function Navigation() {
             </div>
           </div>
 
-          <div
-            className="lg:hidden sm:block"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <img src="/img/icons/Hamburger-iphone.svg" alt="Hamburger-iphone" />
+          {/* Mobile */}
+          <div className="lg:hidden block" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? (
+              <img src="/img/icons/black_close.svg" alt="black_close" />
+            ) : (
+              <img
+                src="/img/icons/Hamburger-iphone.svg"
+                alt="Hamburger-iphone"
+              />
+            )}
           </div>
         </div>
       </nav>
-      <NavigationMobile isOpen={isOpen} />
-    </>
+      <NavigationMobile isOpen={isOpen} setIsOpen={setIsOpen} />
+      <div className="lg:hidden fixed bottom-5 right-5 z-10 flex flex-col gap-[10px] ">
+        <a
+          href="https://www.example.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/img/icons/Facebook.svg" alt="Facebook" />
+        </a>
+        <a
+          href="https://www.example.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/img/icons/Insta.svg" alt="Insta" />
+        </a>
+      </div>
+    </div>
   );
 }

@@ -21,16 +21,16 @@ export default function About({contactRef}) {
     <>
       <Line />
       <div
-        className="relative flex justify-center items-center"
+        className="relative flex sm:justify-start xl:justify-center xl:items-center justify-start items-start"
         style={{ height: `${headSectionHeight}px` }}
       >
-        <div className="flex justify-center px-[60px] gap-[50px]">
+        <div className="flex xl:flex-row flex-col sm:justify-start justify-center sm:px-[60px] px-10 sm:mt-[60px] mt-[30px] sm:gap-[50px] gap-5">
           <img
-            className="object-cover w-[449px] h-[449px]"
+            className="object-cover xl:w-[449px] lg:w-[602px] sm:w-[400px] w-[200px] aspect-square"
             src="/img/aboutme.png"
             alt="NguoiLayCoc"
           />
-          <div className="flex flex-col gap-5 w-[572px]">
+          <div className="flex flex-col sm:gap-5 gap-[10px] xl:w-[572px] lg:w-[771px] sm:text-[17px] text-[16px] leading-5">
             <p>Hello!</p>
             <p>
               I'm Ngoc Vo, a Graphic Designer, Illustrator, and now, a rising
@@ -54,7 +54,7 @@ export default function About({contactRef}) {
             </p>
           </div>
         </div>
-        <Link to="#contact" onClick={toContactHandling} className="absolute right-[50px] bottom-[30px]">
+        <Link to="#contact" onClick={toContactHandling} className="sm:block hidden absolute right-[50px] bottom-[30px]">
           <img src="/img/icons/jump_down.svg" alt="jump_down" />
         </Link>
       </div>

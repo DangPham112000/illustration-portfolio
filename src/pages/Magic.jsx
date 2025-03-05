@@ -3,7 +3,7 @@ import { useNavBar } from "../context/NavBarContext";
 import ImageWithOverlay from "../components/ImageWithOverlay";
 import magicCollection from "../data/magicCollection";
 import Copyright from "../components/Copyright";
-
+import Line from "../components/Line";
 
 export default function Magic() {
   const { navBarHeight } = useNavBar();
@@ -28,11 +28,15 @@ export default function Magic() {
 
   return (
     <>
+      <div className="lg:hidden">
+        <Line />
+      </div>
       <div className="relative flex flex-col items-center justify-center">
         {/* Head section */}
         <div ref={headRef} className="absolute -top-80"></div>
+        {/* Ipad - Desktop */}
         <div
-          className="relative w-full md:bg-[url('/img/background/Magic_castles.png')] bg-white bg-cover bg-center"
+          className="md:block hidden relative w-full md:bg-[url('/img/background/Magic_castles.png')] bg-white bg-cover bg-center"
           style={{ height: `${headSectionHeight}px` }}
         >
           <div className="relative top-[121px] left-[110px] w-[462px]">
@@ -54,16 +58,25 @@ export default function Magic() {
             <img src="/img/icons/jump_down.svg" alt="jump_down" />
           </div>
         </div>
+        {/* Mobile */}
+        <div className="md:hidden block px-10 py-[30px]">
+          <h3 className="text-[21px] mb-[10px]">Magic World</h3>
+          <p className="text-[15px]">
+            Old folk stories always take me back to my childhood, where I feel
+            like a time traveler.
+          </p>
+          <p className="text-[15px] mt-[10px]">Fairy tales set my imagination free!</p>
+        </div>
 
         {/* Collection section */}
-        <div className="container m-auto py-10 px-0" ref={collectionRef}>
-          <div className="flex items-center justify-center">
+        <div className="md:m-auto md:py-10 px-0 w-full" ref={collectionRef}>
+          <div className="flex justify-center">
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 xl:w-[1156px] lg:w-[764px] 2xl:w-[1548px]">
               {magicCollection.map((item, index) => {
                 return (
                   <div
                     key={index}
-                    className="flex items-center justify-center w-[372px] h-[372px]"
+                    className="flex items-center justify-center md:w-[372px] md:h-[372px] h-[270px]"
                   >
                     <ImageWithOverlay
                       imageUrl={item.priImg}
@@ -78,7 +91,7 @@ export default function Magic() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-auto text-center mb-4">
+        <div className="md:mt-auto mt-5 text-center mb-4">
           <Copyright />
         </div>
         <div
