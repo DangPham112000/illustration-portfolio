@@ -30,6 +30,7 @@ export default function MagicSlider({
   };
 
   useEffect(() => {
+    setCurrentIndexSlide(0);
     if (!autoSlide) return;
     const slideInterval = setInterval(nextHandling, autoSlideInterval);
     return () => {

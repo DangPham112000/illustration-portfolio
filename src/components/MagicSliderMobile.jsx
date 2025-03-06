@@ -4,15 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./MagicSliderMobile.css";
 
 export default function MagicSliderMobile({ imgSrcs = [] }) {
-  const getMargin = (index) => {
-    if (index === imgSrcs.length - 1 || index === 0) return "40px";
-    return "10px";
-  };
   return (
     <div className="w-full h-full">
       <Swiper
         slidesPerView={"auto"}
-        // spaceBetween={20}
         freeMode={true}
         modules={[FreeMode]}
       >
