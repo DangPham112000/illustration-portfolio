@@ -2,34 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 import { HashLink } from "react-router-hash-link";
 import { useNavBar } from "../context/NavBarContext";
-
-const menuList = [
-  {
-    id: "home",
-    title: "Home",
-    link: "/",
-  },
-  {
-    id: "magic",
-    title: "Magic",
-    link: "/magic",
-  },
-  {
-    id: "life",
-    title: "Life",
-    link: "/life",
-  },
-  {
-    id: "about",
-    title: "About",
-    link: "/abco",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-    link: "/abco#contact",
-  },
-];
+import { menuList } from "../data/menuList";
 
 export default function NavigationMobile({ isOpen, setIsOpen }) {
   const { navBarHeight } = useNavBar();
