@@ -122,7 +122,6 @@ export default function Magic() {
             </p>
             <ArrowDown />
           </div>
-          {/*  */}
         </div>
         {/* Mobile */}
         <div className="sm:hidden block px-10 py-[30px]">
