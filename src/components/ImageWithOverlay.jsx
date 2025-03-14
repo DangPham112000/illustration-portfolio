@@ -48,7 +48,7 @@ const ImageWithOverlay = ({ imageUrl, imageTitle, imageId }) => {
         className="object-cover h-full w-full"
       />
       <div
-        className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+        className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-90"
         style={{ backgroundColor: mainColor }}
       />
     </Link>

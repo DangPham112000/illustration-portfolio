@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Copyright from "./Copyright";
+import ArrowUp from "./button/ArrowUp";
 
 export default function Contact({ aboutRef }) {
   const toAboutHandling = () => {
@@ -30,9 +31,9 @@ export default function Contact({ aboutRef }) {
         <Link
           to="#about"
           onClick={toAboutHandling}
-          className="sm:block hidden absolute right-[50px] bottom-[30px]"
+          className="sm:block hidden absolute right-[60px] bottom-[50px] w-[90px]"
         >
-          <img src="/img/icons/jump_up.svg" alt="jump_up" />
+          <ArrowUp />
         </Link>
       </div>
     </>

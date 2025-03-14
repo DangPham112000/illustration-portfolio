@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Line from "./Line";
 import { useNavBar } from "../context/NavBarContext";
 import { Link } from "react-router-dom";
+import ArrowDown from "./button/ArrowDown";
 
 export default function About({contactRef}) {
   const { navBarHeight } = useNavBar();
@@ -19,7 +19,6 @@ export default function About({contactRef}) {
 
   return (
     <>
-      <Line />
       <div
         className="relative flex sm:justify-start xl:justify-center xl:items-center justify-start items-start"
         style={{ height: `${headSectionHeight}px` }}
@@ -54,8 +53,8 @@ export default function About({contactRef}) {
             </p>
           </div>
         </div>
-        <Link to="#contact" onClick={toContactHandling} className="sm:block hidden absolute right-[50px] bottom-[30px]">
-          <img src="/img/icons/jump_down.svg" alt="jump_down" />
+        <Link to="#contact" onClick={toContactHandling} className="sm:block hidden absolute right-[60px] bottom-[60px] w-[90px]">
+          <ArrowDown />
         </Link>
       </div>
     </>

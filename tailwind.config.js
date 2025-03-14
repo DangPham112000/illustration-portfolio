@@ -18,6 +18,7 @@ export default {
       fontFamily: {
         sans: ["Ubuntu", ...defaultTheme.fontFamily.sans],
         logo: ["Ruluko", ...defaultTheme.fontFamily.sans],
+        inter: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         base: ["17px", "21px"],

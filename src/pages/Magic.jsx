@@ -4,6 +4,8 @@ import ImageWithOverlay from "../components/ImageWithOverlay";
 import magicCollection from "../data/magicCollection";
 import Copyright from "../components/Copyright";
 import Line from "../components/Line";
+import ArrowDown from "../components/button/ArrowDown";
+import ArrowUp from "../components/button/ArrowUp";
 
 export default function Magic() {
   const { navBarHeight } = useNavBar();
@@ -113,9 +115,12 @@ export default function Magic() {
           {/* Button down */}
           <div
             onClick={toCollectionHandling}
-            className="absolute right-[50px] bottom-[30px] cursor-pointer"
+            className="absolute right-[90px] bottom-10 cursor-pointer w-[80px]"
           >
-            <img src="/img/icons/jump_down.svg" alt="jump_down" />
+            <p className="absolute text-[24px] -top-10 right-1/2 transform translate-x-1/2 min-w-max font-inter">
+              see projects
+            </p>
+            <ArrowDown />
           </div>
           {/*  */}
         </div>
@@ -133,7 +138,7 @@ export default function Magic() {
 
         {/* Collection section */}
         <div
-          className="sm:my-[60px] sm:px-[40px] xl:px-[60px] p-0 w-full"
+          className="sm:my-[60px] sm:px-10 xl:px-[60px] p-0 w-full"
           ref={collectionRef}
         >
           <div className="flex justify-center">
@@ -160,11 +165,13 @@ export default function Magic() {
         <div className="sm:mt-auto mt-5 text-center mb-4">
           <Copyright />
         </div>
+
+        {/* Btn up */}
         <div
           onClick={toHeadHandling}
-          className="absolute right-[50px] bottom-[30px] cursor-pointer"
+          className="absolute right-[90px] bottom-10 sm:block hidden cursor-pointer w-20"
         >
-          <img src="/img/icons/jump_up.svg" alt="jump_up" />
+          <ArrowUp />
         </div>
       </div>
     </>

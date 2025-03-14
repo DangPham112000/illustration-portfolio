@@ -33,7 +33,7 @@ export default function MagicDetail() {
     <>
       <Line />
       <div className="flex flex-col md:flex-1 h-full">
-        <div className="lg:grid lg:grid-cols-2 md:gap-[50px] flex flex-col items-start justify-start md:px-[60px] md:py-[60px]  md:h-full">
+        <div className="lg:grid lg:grid-cols-2 md:gap-[50px] flex flex-col items-start justify-start md:px-[60px] md:py-[60px] md:h-full">
           {/* Ipad - Desktop Slider */}
           <div className="lg:block hidden w-full h-full">
             <MagicSlider autoSlide={false} imgSrcs={magicItem.imgs} />
@@ -44,7 +44,7 @@ export default function MagicDetail() {
             <h2 className="font-semibold text-[32px] w-[364px] md:mb-[30px] mb-5">
               {magicItem.title}
             </h2>
-            <pre className="md:mb-[60px] mb-[40px] text-[17px] whitespace-pre-wrap font-[Inter]">
+            <pre className="md:mb-[60px] mb-10 text-[17px] whitespace-pre-wrap font-[Inter]">
               {magicItem.description}
             </pre>
             <div className="w-full flex justify-end lg:justify-start">
