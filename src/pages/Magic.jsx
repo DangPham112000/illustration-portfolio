@@ -6,11 +6,14 @@ import Copyright from "../components/Copyright";
 import Line from "../components/Line";
 import ArrowDown from "../components/button/ArrowDown";
 import ArrowUp from "../components/button/ArrowUp";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import ScrollToTopButton from "../components/button/ScrollToTopButton";
 
 export default function Magic() {
   const { navBarHeight } = useNavBar();
 
   const [headSectionHeight, setHeadSectionHeight] = useState(0);
+  const [isOpenMoreDetail, setIsOpenMoreDetail] = useState(false);
 
   const collectionRef = useRef(null);
   const headRef = useRef(null);
@@ -19,8 +22,8 @@ export default function Magic() {
     collectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const toHeadHandling = () => {
-    headRef.current.scrollIntoView({ behavior: "smooth" });
+  const moreDetailOpening = () => {
+    setIsOpenMoreDetail(!isOpenMoreDetail);
   };
 
   useEffect(() => {
@@ -31,8 +34,7 @@ export default function Magic() {
   return (
     <>
       <div className="relative flex flex-col items-center justify-center">
-        {/* Head section */}
-        <div ref={headRef} className="absolute -top-80"></div>
+        <div ref={headRef} className="absolute -top-[200px]" />
         {/* Ipad - Desktop */}
         <div
           className="sm:block hidden relative w-full sm:bg-[url('/img/background/Magic_castles.png')] bg-white bg-cover bg-center"
@@ -40,7 +42,7 @@ export default function Magic() {
         >
           {/* 1280 - 1728 Head Content */}
           <div className="absolute xl:flex hidden top-[85px] left-[60px] gap-[30px]">
-            <div className="relative 3xl:w-[516px] 2xl:w-[444px] xl:w-[367px] bg-white h-fit px-5 pt-5 pb-10 flex flex-col gap-[30px]">
+            <div className="relative 3xl:w-[516px] 2xl:w-[444px] xl:w-[367px] bg-white bg-opacity-80 h-fit px-5 pt-5 pb-10 flex flex-col gap-[30px]">
               <h3 className="text-[32px] font-medium">Magic World</h3>
               <div className="w-[90px]">
                 <Line />
@@ -50,15 +52,20 @@ export default function Magic() {
                 of my artworks. I hope you can find hope and happiness through
                 my illustrations and drawings.
               </p>
-              <div className="absolute top-5 right-5 aspect-square w-[50px] rounded-full border border-black flex items-center justify-center">
-                <img
-                  src="/img/icons/magic_right.svg"
-                  alt="left_btn"
-                  className="h-[30px]"
-                />
+              <div
+                onClick={moreDetailOpening}
+                className={`${
+                  isOpenMoreDetail ? "hidden" : "block"
+                } absolute top-5 right-5 aspect-square w-[50px] rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white hover:cursor-pointer transform duration-300`}
+              >
+                <SlArrowRight size={30} />
               </div>
             </div>
-            <div className="relative 3xl:w-[516px] 2xl:w-[444px] xl:w-[367px] bg-white flex flex-col gap-[10px] text-base px-5 pb-10 pt-[90px]">
+            <div
+              className={`${
+                isOpenMoreDetail ? "flex" : "hidden"
+              } flex-col gap-[10px] relative 3xl:w-[516px] 2xl:w-[444px] xl:w-[367px] bg-white bg-opacity-80 text-base px-5 pb-10 pt-[90px]`}
+            >
               <p>
                 Old folk stories always take me back to my childhood, making me
                 feel like a time traveler.
@@ -78,12 +85,11 @@ export default function Magic() {
                 me to be gentle, kind, and strong no matter what adversity I
                 have to face.
               </p>
-              <div className="absolute top-5 left-5 aspect-square w-[50px] rounded-full border border-black flex items-center justify-center">
-                <img
-                  src="/img/icons/magic_left.svg"
-                  alt="left_btn"
-                  className="h-[30px]"
-                />
+              <div
+                onClick={moreDetailOpening}
+                className="absolute top-5 left-5 aspect-square w-[50px] rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white hover:cursor-pointer transform duration-300"
+              >
+                <SlArrowLeft size={30} />
               </div>
             </div>
           </div>
@@ -152,6 +158,7 @@ export default function Magic() {
                       imageUrl={item.priImg}
                       imageTitle={item.title}
                       imageId={item.id}
+                      imageMainColor={item.mainColor}
                     />
                   </div>
                 );
@@ -166,11 +173,8 @@ export default function Magic() {
         </div>
 
         {/* Btn up */}
-        <div
-          onClick={toHeadHandling}
-          className="absolute right-[90px] bottom-10 sm:block hidden cursor-pointer w-20"
-        >
-          <ArrowUp />
+        <div className="fixed right-[90px] bottom-10 sm:block hidden">
+          <ScrollToTopButton headRef={headRef} />
         </div>
       </div>
     </>
