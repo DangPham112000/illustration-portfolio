@@ -67,7 +67,7 @@ export default function Life() {
           />
         )}
 
-        {/* Copyright */}
+        {/* Footer */}
         <div className="flex-1 mt-[60px] flex flex-col justify-end">
           <Footer />
         </div>
