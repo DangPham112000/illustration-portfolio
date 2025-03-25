@@ -39,7 +39,7 @@ const ScrollToTopButton = ({ headRef }) => {
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ duration: 0.3 }}
           onClick={toHeadHandling}
-          className="cursor-pointer w-20"
+          className="cursor-pointer w-full"
           aria-label="Scroll to top"
         >
           <ArrowUp />

@@ -5,6 +5,7 @@ import LifeSlider from "../components/LifeSlider";
 import ModalSlider from "../components/ModalSlider";
 import lifeImages from "../data/lifeImages";
 import LifeGridIpad from "../components/LifeGridIpad";
+import Footer from "../components/Footer";
 
 export default function Life() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -67,10 +68,8 @@ export default function Life() {
         )}
 
         {/* Copyright */}
-        <div className="flex-1 flex flex-col justify-end">
-          <div className="text-center my-[30px]">
-            <Copyright />
-          </div>
+        <div className="flex-1 mt-[60px] flex flex-col justify-end">
+          <Footer />
         </div>
       </div>
     </>

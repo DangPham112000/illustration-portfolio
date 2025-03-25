@@ -6,6 +6,7 @@ import getCurrentPath from "../utils/getCurrentPath";
 import { HashLink } from "react-router-hash-link";
 import Line from "./Line";
 import { menuList } from "../data/menuList";
+import { FacebookIcon, InstagramIcon } from "./button/socialIcon";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,7 @@ export default function Navigation() {
 
           {/* Left nav */}
           <div className="hidden lg:block ">
-            <div className="flex justify-between items-center gap-[40px]">
+            <div className="flex justify-between items-center gap-10">
               {/* Link */}
               <ul className="flex items-center gap-[30px]">
                 {menuList.map((item) => {
@@ -52,7 +53,7 @@ export default function Navigation() {
                     >
                       <HashLink
                         to={item.link}
-                        className="flex justify-center text-[17px] px-1 hover:border-b-2 hover:border-black  hover:-mb-[2px]"
+                        className="flex justify-center text-[17px] px-1 hover:border-b-2 hover:border-black hover:-mb-[2px]"
                         style={
                           currentPage === item.link
                             ? {
@@ -72,20 +73,8 @@ export default function Navigation() {
 
               {/* Social icons */}
               <div className="flex gap-4">
-                <a
-                  href="https://www.example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="/img/icons/Facebook.svg" alt="Facebook" />
-                </a>
-                <a
-                  href="https://www.example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="/img/icons/Insta.svg" alt="Insta" />
-                </a>
+                <FacebookIcon />
+                <InstagramIcon />
               </div>
             </div>
           </div>
@@ -105,20 +94,8 @@ export default function Navigation() {
       </nav>
       <NavigationMobile isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="lg:hidden fixed bottom-5 right-5 z-10 flex flex-col gap-[10px] ">
-        <a
-          href="https://www.example.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/img/icons/Facebook.svg" alt="Facebook" />
-        </a>
-        <a
-          href="https://www.example.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/img/icons/Insta.svg" alt="Insta" />
-        </a>
+        <FacebookIcon />
+        <InstagramIcon />
       </div>
       <Line />
     </div>

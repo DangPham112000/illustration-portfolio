@@ -5,9 +5,9 @@ import magicCollection from "../data/magicCollection";
 import Copyright from "../components/Copyright";
 import Line from "../components/Line";
 import ArrowDown from "../components/button/ArrowDown";
-import ArrowUp from "../components/button/ArrowUp";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import ScrollToTopButton from "../components/button/ScrollToTopButton";
+import Footer from "../components/Footer";
 
 export default function Magic() {
   const { navBarHeight } = useNavBar();
@@ -27,7 +27,14 @@ export default function Magic() {
   };
 
   useEffect(() => {
-    const height = window.innerHeight - navBarHeight;
+    let height;
+    if (window.innerWidth > 1024) {
+      height = window.innerHeight - navBarHeight;
+    } else if (window.innerWidth <= 1024 && window.innerWidth > 834) {
+      height = 557;
+    } else {
+      height = 470;
+    }
     setHeadSectionHeight(height);
   }, [navBarHeight]);
 
@@ -35,19 +42,19 @@ export default function Magic() {
     <>
       <div className="relative flex flex-col items-center justify-center">
         <div ref={headRef} className="absolute -top-[200px]" />
-        {/* Ipad - Desktop */}
+        {/* Desktop - Ipad */}
         <div
-          className="sm:block hidden relative w-full sm:bg-[url('/img/background/Magic_castles.png')] bg-white bg-cover bg-center"
+          className="sm:block hidden relative w-full sm:bg-[url('/img/background/Magic_castles.jpg')] bg-white bg-cover bg-center"
           style={{ height: `${headSectionHeight}px` }}
         >
           {/* 1280 - 1728 Head Content */}
-          <div className="absolute xl:flex hidden top-[85px] left-[60px] gap-[30px]">
-            <div className="relative 3xl:w-[516px] 2xl:w-[444px] xl:w-[367px] bg-white bg-opacity-80 h-fit px-5 pt-5 pb-10 flex flex-col gap-[30px]">
+          <div className="xl:grid hidden grid-cols-3 px-[60px] pt-[85px] gap-[30px]">
+            <div className="relative w-full bg-white bg-opacity-80 h-fit px-5 py-10 flex flex-col gap-[30px]">
               <h3 className="text-[32px] font-medium">Magic World</h3>
               <div className="w-[90px]">
                 <Line />
               </div>
-              <p className="font-medium 3xl:w-[426px] text-[17px] leading-[21px]">
+              <p className="font-medium 3xl:w-[426px] w-full text-[17px] leading-[21px]">
                 Fairy tales have sparked my imagination and inspired the themes
                 of my artworks. I hope you can find hope and happiness through
                 my illustrations and drawings.
@@ -64,7 +71,7 @@ export default function Magic() {
             <div
               className={`${
                 isOpenMoreDetail ? "flex" : "hidden"
-              } flex-col gap-[10px] relative 3xl:w-[516px] 2xl:w-[444px] xl:w-[367px] bg-white bg-opacity-80 text-base px-5 pb-10 pt-[90px]`}
+              } flex-col gap-[10px] relative w-full bg-white bg-opacity-80 text-base px-5 pb-10 pt-[90px]`}
             >
               <p>
                 Old folk stories always take me back to my childhood, making me
@@ -93,6 +100,7 @@ export default function Magic() {
               </div>
             </div>
           </div>
+
           {/* 640 - 1280 Head Content */}
           <div className="xl:hidden sm:block hidden absolute left-[60px] top-10 w-[430px] text-[14px] leading-[21px]">
             <p>
@@ -121,7 +129,7 @@ export default function Magic() {
           {/* Button down */}
           <div
             onClick={toCollectionHandling}
-            className="absolute right-[90px] bottom-10 cursor-pointer w-[80px]"
+            className="absolute right-[90px] bottom-10 cursor-pointer lg:w-20 w-[60px]"
           >
             <p className="absolute text-[24px] -top-10 right-1/2 transform translate-x-1/2 min-w-max font-inter">
               see projects
@@ -168,12 +176,12 @@ export default function Magic() {
         </div>
 
         {/* Copyright */}
-        <div className="sm:mt-auto mt-5 text-center mb-4">
-          <Copyright />
+        <div className="mt-[60px]">
+          <Footer />
         </div>
 
         {/* Btn up */}
-        <div className="fixed right-[90px] bottom-10 sm:block hidden">
+        <div className="fixed right-[90px] bottom-10 sm:block hidden lg:w-20 w-[60px]">
           <ScrollToTopButton headRef={headRef} />
         </div>
       </div>
