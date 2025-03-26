@@ -1,10 +1,10 @@
-import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { menuList } from "../data/menuList";
 import { HashLink } from "react-router-hash-link";
 import { useNavBar } from "../context/NavBarContext";
-import { menuList } from "../data/menuList";
 
-export default function NavigationMobile({ currentPage }) {
+export default function NavigationIpad({ currentPage }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const { navBarHeight } = useNavBar();
@@ -12,11 +12,10 @@ export default function NavigationMobile({ currentPage }) {
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <>
       {/* Button */}
-      <button className="sm:hidden block" onClick={toggleOpen}>
+      <button className="lg:hidden sm:block hidden" onClick={toggleOpen}>
         {isOpen ? (
           <img src="/img/icons/black_close.svg" alt="black_close" />
         ) : (
@@ -28,22 +27,21 @@ export default function NavigationMobile({ currentPage }) {
       <AnimatePresence mode="wait">
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, y: navBarHeight }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute w-full top-full left-0 z-50"
-            style={{ height: `calc(100vh - ${navBarHeight}px - 1px)` }}
+            className="absolute w-full h-[300px] top-0 left-0 z-50"
           >
-            <div className="bg-black h-full">
-              <ul className="flex flex-col justify-end items-end gap-[46px] py-[50px] px-[55px]">
+            <div className="bg-black h-full flex items-center justify-center">
+              <ul className="flex justify-between gap-[60px]">
                 {menuList.map((item) => {
                   return (
                     <li key={item.id}>
                       <HashLink
                         onClick={() => setIsOpen(false)}
                         to={item.link}
-                        className="inline-block text-white text-[28px]"
+                        className="inline-block text-white text-[28px] font-light"
                         style={
                           currentPage === item.link
                             ? {

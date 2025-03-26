@@ -30,6 +30,18 @@ export const FacebookIcon = ({ width }) => (
   <SocialIcon width={width} imgSrc="/img/icons/Facebook.png" />
 );
 
+export const InstagramLiteIcon = ({ width }) => (
+  <SocialIcon
+    width={width}
+    href="https://www.instagram.com/ngoc.vo.illustration/"
+    imgSrc="/img/icons/Insta_lite.png"
+  />
+);
+
+export const FacebookLiteIcon = ({ width }) => (
+  <SocialIcon width={width} imgSrc="/img/icons/Facebook_lite.png" />
+);
+
 export const BehanceIcon = ({ width }) => (
   <SocialIcon width={width} imgSrc="/img/icons/Behance.png" />
 );

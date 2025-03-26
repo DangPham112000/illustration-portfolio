@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Line from "../components/Line";
-import Copyright from "../components/Copyright";
 import LifeSlider from "../components/LifeSlider";
 import ModalSlider from "../components/ModalSlider";
 import lifeImages from "../data/lifeImages";

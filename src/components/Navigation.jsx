@@ -6,10 +6,15 @@ import getCurrentPath from "../utils/getCurrentPath";
 import { HashLink } from "react-router-hash-link";
 import Line from "./Line";
 import { menuList } from "../data/menuList";
-import { FacebookIcon, InstagramIcon } from "./button/socialIcon";
+import {
+  FacebookIcon,
+  FacebookLiteIcon,
+  InstagramIcon,
+  InstagramLiteIcon,
+} from "./button/socialIcon";
+import NavigationIpad from "./NavigationIpad";
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(getCurrentPath());
   const navRef = useRef(null);
   const { updateNavBarHeight } = useNavBar();
@@ -27,7 +32,6 @@ export default function Navigation() {
   return (
     <div className="relative">
       <nav ref={navRef} className="w-full">
-        {/* sm:py-6 py-[13px] sm:pl-[60px] pl-10 sm:pr-[30px] pr-5 mx-auto */}
         <div className="flex justify-between items-center sm:mx-[60px] ml-10 mr-5 sm:h-[112px] h-[56px]">
           {/* Page name */}
           <div className="text-[32px] flex items-center">
@@ -40,11 +44,11 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* Left nav */}
+          {/* Desktop left nav */}
           <div className="hidden lg:block ">
-            <div className="flex justify-between items-center gap-10">
+            <div className="flex justify-between gap-10">
               {/* Link */}
-              <ul className="flex items-center gap-[30px]">
+              <ul className="flex items-end gap-[30px]">
                 {menuList.map((item) => {
                   return (
                     <li
@@ -79,24 +83,24 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* Mobile */}
-          <div className="lg:hidden block" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? (
-              <img src="/img/icons/black_close.svg" alt="black_close" />
-            ) : (
-              <img
-                src="/img/icons/Hamburger-iphone.svg"
-                alt="Hamburger-iphone"
-              />
-            )}
+          {/* Ipad left nav */}
+          <NavigationIpad currentPage={currentPage} />
+          <div className="lg:hidden sm:flex hidden gap-4">
+            <FacebookIcon />
+            <InstagramIcon />
+          </div>
+
+          {/* Mobile left nav */}
+          <div className="sm:hidden flex items-center gap-5">
+            <div className="flex items-center gap-[15px]">
+              <FacebookLiteIcon width={25} />
+              <InstagramLiteIcon width={29} />
+            </div>
+
+            <NavigationMobile currentPage={currentPage} />
           </div>
         </div>
       </nav>
-      <NavigationMobile isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className="lg:hidden fixed bottom-5 right-5 z-10 flex flex-col gap-[10px] ">
-        <FacebookIcon />
-        <InstagramIcon />
-      </div>
       <Line />
     </div>
   );

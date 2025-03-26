@@ -2,14 +2,16 @@ import React from "react";
 import Line from "../components/Line";
 import { GoArrowDown } from "react-icons/go";
 import Footer from "../components/Footer";
+import ContactContent from "../components/ContactContent";
+import ModalContactMobile from "../components/ModalContactMobile";
 
 export default function About2() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       {/* About Section */}
-      <div className="bg-[url('/img/contact/circle_BG.jpg')] bg-contain bg-center pt-[60px] px-[60px]">
-        <div className="grid grid-cols-3 gap-[30px]">
-          <div className="w-full flex flex-col gap-[30px]">
+      <div className="lg:bg-[url('/img/contact/circle_BG.jpg')] bg-contain bg-center sm:pt-[60px] pt-[30px] lg:px-[60px] px-[40px]">
+        <div className="sm:grid flex flex-col lg:grid-cols-3 grid-cols-2 gap-x-[30px] lg:gap-y-[30px] gap-y-[20px]">
+          <div className="w-full sm:flex hidden flex-col lg:gap-[30px] gap-5">
             <img
               className="object-cover w-full aspect-square"
               src="/img/aboutme.png"
@@ -21,8 +23,17 @@ export default function About2() {
               cute-but-naughty dogs, Bom and Bun."
             </span>
           </div>
-          <div className="flex flex-col gap-[10px] px-[30px] text-[17px] leading-[21px]">
-            <h1 className="text-[28px]">Hello!</h1>
+
+          <img
+            className="sm:hidden block object-cover w-[100px] aspect-square"
+            src="/img/aboutme.png"
+            alt="me"
+          />
+
+          <div className="flex flex-col lg:gap-[10px] sm:gap-5 gap-[10px] lg:px-[30px] sm:text-[17px] text-[16px] sm:leading-[21px] leading-tight">
+            <h1 className="lg:text-[28px] sm:text-[24px] text-[16px]">
+              Hello!
+            </h1>
             <p>
               I'm Ngoc Vo, a Graphic Designer, Illustrator, and now, a rising
               ceramic artists too!
@@ -44,7 +55,12 @@ export default function About2() {
               creating deeper connections with the audience.
             </p>
           </div>
-          <div className="flex flex-col gap-[30px] h-fit ring-[1px] ring-black p-[30px] pl-[60px] text-[17px] leading-[21px]">
+
+          <div className="w-full h-full lg:hidden sm:flex hidden items-center">
+            <img src="/img/contact/Contact_Bom_Bun.jpg" alt="Contact_Bom_Bun" />
+          </div>
+
+          <div className="relative flex flex-col sm:gap-[30px] gap-5 h-fit sm:ring-[1px] sm:ring-black sm:mt-0 mt-[10px] sm:p-[30px] sm:pl-[60px] text-[17px] leading-[21px] lg:self-start self-center">
             <p className="font-medium">Recognition</p>
             <ul className="list-disc">
               <li>2012 ASEAN-Korea Multimedia Competition</li>
@@ -52,12 +68,15 @@ export default function About2() {
               <li>2014 Korea-ASEAN Exhibition in Jakarta</li>
               <li>2024 2024 Media X Space: Across Asia Exhibition</li>
             </ul>
+            <div className="absolute -right-[28px] -top-[26px] sm:hidden block">
+              <ModalContactMobile />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Contact Me Seperate */}
-      <div className="w-[400px] flex flex-col items-center justify-between mt-[60px] gap-[15px]">
+      <div className="w-[400px] sm:flex hidden flex-col items-center justify-between lg:mt-[60px] mt-5 gap-[15px]">
         <Line />
         <div className="flex items-center">
           <div className="flex items-center justify-center w-[58px] aspect-square">
@@ -69,7 +88,7 @@ export default function About2() {
       </div>
 
       {/* Contact Section */}
-      <div className="mt-10 px-[60px] grid grid-cols-3 gap-[30px]">
+      <div className="lg:mt-10 mt-5 px-[60px] sm:grid hidden lg:grid-cols-3 grid-cols-2 gap-[30px]">
         <div className="w-full h-full flex items-center">
           <img
             src="/img/contact/Contact_artist_left.jpg"
@@ -77,37 +96,15 @@ export default function About2() {
           />
         </div>
         <div className="w-full h-full flex items-center">
-          <div className="flex flex-col gap-5 ">
-            <h1 className="text-[28px]">Hi! Let's work together.</h1>
-            <div className="flex flex-col gap-[5px] text-[17px] leading-[21px]">
-              <p>I'm excited to work on:</p>
-              <ul className="list-disc ml-[30px]">
-                <li>Children's Book Illustration</li>
-                <li>Picture Book Illustration</li>
-                <li>Editorial Illustration</li>
-                <li>Motion Graphics</li>
-                <li>Ceramic Arts</li>
-              </ul>
-              <p>For commissions and project enquiries, please contact:</p>
-              <p className="font-medium text-[21px] underline text-[#FF4B6F]">
-                ngoc.vo.illustration@gmail.com
-              </p>
-            </div>
-            <div className="w-[52px]">
-              <Line />
-            </div>
-            <p className="text-[17px] leading-[21px] italic font-inter">
-              I am happy to hear from you :)
-            </p>
-          </div>
+          <ContactContent />
         </div>
-        <div className="w-full h-full flex items-center">
+        <div className="w-full h-full lg:flex hidden items-center">
           <img src="/img/contact/Contact_Bom_Bun.jpg" alt="Contact_Bom_Bun" />
         </div>
       </div>
 
       {/* Footer */}
-      <div className="flex-1 mt-[60px] w-full">
+      <div className="flex-1 lg:mt-[60px] sm:mt-10 mt-[30px] w-full">
         <Footer />
       </div>
     </div>

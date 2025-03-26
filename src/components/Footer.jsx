@@ -19,7 +19,7 @@ export default function Footer() {
         <BehanceIcon />
         <VimeoIcon />
       </div>
-      <p>©2025 by Ngoc Vo</p>
+      <p className="text-[14px]">©2025 by Ngoc Vo</p>
     </div>
   );
 }

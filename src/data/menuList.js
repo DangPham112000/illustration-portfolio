@@ -17,11 +17,6 @@ export const menuList = [
     {
       id: "about",
       title: "About",
-      link: "/abco",
-    },
-    {
-      id: "contact",
-      title: "Contact",
-      link: "/abco#contact",
+      link: "/about",
     },
   ]; 
