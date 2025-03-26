@@ -37,7 +37,7 @@ export default function MagicDetail() {
           {/* Ipad - Desktop Slider */}
           <div className="xl:w-1/2 flex-1 sm:flex hidden justify-center">
             <div className="xl:w-full lg:w-[566px] md:w-[500px] sm:w-[450px]">
-              <MagicSlider autoSlide={false} imgSrcs={magicItem.imgs} />
+              <MagicSlider autoSlide={false} modalSrcs={magicItem.full} sliderSrcs={magicItem.square} />
             </div>
           </div>
 
@@ -95,7 +95,7 @@ export default function MagicDetail() {
 
           {/* Mobile Slider */}
           <div className="md:hidden block w-full h-full">
-            <MagicSliderMobile imgSrcs={magicItem.imgs} />
+            <MagicSliderMobile modalSrcs={magicItem.full} sliderSrcs={magicItem.square} />
           </div>
         </div>
       </div>

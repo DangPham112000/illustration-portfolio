@@ -166,7 +166,7 @@ export default function Magic() {
                       imageUrl={item.priImg}
                       imageTitle={item.title}
                       imageId={item.id}
-                      imageMainColor={item.mainColor}
+                      imageMainColor={undefined}
                     />
                   </div>
                 );

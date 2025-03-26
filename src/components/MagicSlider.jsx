@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import ModalSlider from "./ModalSlider";
 
 export default function MagicSlider({
-  imgSrcs = [],
+  sliderSrcs = [],
+  modalSrcs = [],
   autoSlide = false,
   autoSlideInterval = 2000,
 }) {
@@ -21,13 +22,13 @@ export default function MagicSlider({
 
   const nextHandling = () => {
     setCurrentIndexSlide((prevIndexSlide) =>
-      prevIndexSlide + 1 === imgSrcs.length ? 0 : prevIndexSlide + 1
+      prevIndexSlide + 1 === sliderSrcs.length ? 0 : prevIndexSlide + 1
     );
   };
 
   const prevHandling = () => {
     setCurrentIndexSlide((prevIndexSlide) =>
-      prevIndexSlide - 1 < 0 ? imgSrcs.length - 1 : prevIndexSlide - 1
+      prevIndexSlide - 1 < 0 ? sliderSrcs.length - 1 : prevIndexSlide - 1
     );
   };
 
@@ -42,19 +43,19 @@ export default function MagicSlider({
     return () => {
       clearInterval(slideInterval);
     };
-  }, [imgSrcs]);
+  }, [sliderSrcs]);
 
   return (
     <div className="relative h-full flex flex-col">
       <div
         className="h-full aspect-square bg-center bg-cover duration-500 cursor-pointer"
         style={{
-          backgroundImage: `url(${imgSrcs[currentIndexSlide]})`,
+          backgroundImage: `url(${sliderSrcs[currentIndexSlide]})`,
         }}
         onClick={() => openModal(currentIndexSlide)}
       />
 
-      {imgSrcs.length > 1 && (
+      {sliderSrcs.length > 1 && (
         <>
           {/* Left & Right Button */}
           <button
@@ -81,7 +82,7 @@ export default function MagicSlider({
           {/* Dots */}
           <div className="absolute left-0 right-0 -bottom-10">
             <div className="flex items-center justify-center gap-[10px]">
-              {imgSrcs.map((_, index) => (
+              {sliderSrcs.map((_, index) => (
                 <div
                   onClick={() => goToIndex(index)}
                   key={index}
@@ -98,7 +99,11 @@ export default function MagicSlider({
       )}
 
       {isModalOpen && (
-        <ModalSlider onClose={closeModal} index={modalIndex} images={imgSrcs} />
+        <ModalSlider
+          onClose={closeModal}
+          index={modalIndex}
+          images={modalSrcs}
+        />
       )}
     </div>
   );
