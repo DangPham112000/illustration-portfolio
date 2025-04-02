@@ -46,7 +46,7 @@ export default function MagicSlider({
   }, [sliderSrcs]);
 
   return (
-    <div className="relative h-full flex flex-col">
+    <div className="relative max-h-full h-full flex flex-col">
       <div
         className="h-full aspect-square bg-center bg-cover duration-500 cursor-pointer"
         style={{
@@ -59,7 +59,7 @@ export default function MagicSlider({
         <>
           {/* Left & Right Button */}
           <button
-            className="xl:flex hidden absolute left-0 top-1/2 -translate-y-1/2 w-[50px] aspect-square bg-black items-center justify-center"
+            className="sm:flex hidden absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[100%] w-[50px] aspect-square bg-black items-center justify-center"
             onClick={prevHandling}
           >
             <img
@@ -69,7 +69,7 @@ export default function MagicSlider({
             />
           </button>
           <button
-            className="xl:flex hidden absolute right-0 top-1/2 -translate-y-1/2 w-[50px] aspect-square bg-black items-center justify-center"
+            className="sm:flex hidden absolute right-0 top-1/2 -translate-y-1/2 translate-x-[100%] w-[50px] aspect-square bg-black items-center justify-center"
             onClick={nextHandling}
           >
             <img

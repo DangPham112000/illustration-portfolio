@@ -43,7 +43,11 @@ export const FacebookLiteIcon = ({ width }) => (
 );
 
 export const BehanceIcon = ({ width }) => (
-  <SocialIcon width={width} imgSrc="/img/icons/Behance.png" />
+  <SocialIcon
+    width={width}
+    href="https://www.behance.net/ngocillustration"
+    imgSrc="/img/icons/Behance.png"
+  />
 );
 
 export const VimeoIcon = ({ width }) => (

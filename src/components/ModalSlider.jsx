@@ -20,16 +20,15 @@ export default function ModalSlider({
   };
 
   return (
-    <div
-      className="fixed inset-0 bg-black bg-opacity-80 flex items-center z-50"
-      style={{
-        justifyContent: images.length > 1 ? "space-between" : "center",
-      }}
-    >
+    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-around z-50">
       {/* Left btn */}
       {images.length > 1 && (
         <button className="lg:m-[50px] m-[20px]" onClick={handlePrev}>
-          <img src="/img/icons/white_slide_left.svg" alt="white_slide_left" />
+          <img
+            className="min-h-[50px] h-[50px]"
+            src="/img/icons/thin_white_left.png"
+            alt="thin_white_left"
+          />
         </button>
       )}
       {/* IMG */}
@@ -37,19 +36,27 @@ export default function ModalSlider({
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex}`}
-          className="max-w-[70vw] max-h-[90vh] object-contain"
+          className="max-h-[75vh] object-contain"
         />
       </div>
       {/* Right btn */}
       {images.length > 1 && (
         <button className="lg:m-[50px] m-[20px]" onClick={handleNext}>
-          <img src="/img/icons/white_slide_right.svg" alt="white_slide_right" />
+          <img
+            className="min-h-[50px] h-[50px]"
+            src="/img/icons/thin_white_right.png"
+            alt="thin_white_right"
+          />
         </button>
       )}
 
       {/* Close btn */}
-      <button className="absolute top-0 right-0 m-4" onClick={onClose}>
-        <img src="/img/icons/white_close.svg" alt="white_close" />
+      <button className="absolute top-0 right-0 m-10" onClick={onClose}>
+        <img
+          className="w-[50px] aspect-square"
+          src="/img/icons/thin_white_close.png"
+          alt="thin_white_close"
+        />
       </button>
     </div>
   );

@@ -12,7 +12,6 @@ This illustration belongs to my series named “Weave - Plain & Mystic” for an
     square: ["/img/magic/P1___two_lumps/v2_2_cuc_buou_800x800@1.5x.jpg"],
     full: ["/img/magic/P1___two_lumps/v3_zoomin_2_cuc_buou_1080H@1.25x.jpg"],
     mainColor: "#8B4513",
-    imgs: ["/img/magicDetail/p1/2_cuc_buou.jpg"],
   },
 
   {
@@ -35,10 +34,6 @@ This illustration belongs to my series named “Weave - Plain & Mystic” for an
       "/img/magic/P2___Toad/v3_zoom_in/v3_Nguoi_lay_coc_scene2_1080H@1.25x.jpg",
     ],
     mainColor: "#6B4423",
-    imgs: [
-      "/img/magicDetail/p2/nguoi_lay_coc.jpg",
-      "/img/magicDetail/p2/nguoi_lay_coc2.jpg",
-    ],
   },
 
   {
@@ -61,10 +56,6 @@ This illustration belongs to my series named “Weave - Plain & Mystic” for an
       "/img/magic/P3___Lawsuit/v3_zoom_in/v3_Vukienchauchau_scene2_ongBut_1920w.jpg",
     ],
     mainColor: "#A0522D",
-    imgs: [
-      "/img/magicDetail/p3/Vukienchauchau_s1.jpg",
-      "/img/magicDetail/p3/Vukienchauchau_s2_ongBut.jpg",
-    ],
   },
 
   {
@@ -94,15 +85,6 @@ But when the winter passes, the butterflies fly far away. The pot is so upset, a
       "/img/magic/P4___Porcelain/v3___project_zoom_in/v3_chiec_am_sanh_6_theEnd.png",
     ],
     mainColor: "#FFF44F",
-    imgs: [
-      "/img/magicDetail/p4/chiec-am-sanh_1_title.png",
-      "/img/magicDetail/p4/chiec-am-sanh_1.jpg",
-      "/img/magicDetail/p4/chiec-am-sanh_2.jpg",
-      "/img/magicDetail/p4/chiec-am-sanh_3-resize.jpg",
-      "/img/magicDetail/p4/chiec-am-sanh_4.jpg",
-      "/img/magicDetail/p4/chiec-am-sanh_5.jpg",
-      "/img/magicDetail/p4/chiec-am-sanh_theEnd.png",
-    ],
   },
 
   {
@@ -124,12 +106,6 @@ But when the winter passes, the butterflies fly far away. The pot is so upset, a
       "/img/magic/P5___Faries/v3_zoom_in/v3_Tam_hoa_1080H@2x.jpg",
     ],
     mainColor: "#00FF00",
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
-    ],
   },
 
   {
@@ -141,7 +117,6 @@ But when the winter passes, the butterflies fly far away. The pot is so upset, a
     square: ["/img/magic/P6___Fly_high_Dad/v2_Ba_va_Con_gai_800x800@2x.jpg"],
     full: ["/img/magic/P6___Fly_high_Dad/v3_Ba_va_Con_gai_1080H.jpg"],
     mainColor: "#008000",
-    imgs: ["/img/magicDetail/p6/Ba-va-Con-gai.jpg"],
   },
 
   {
@@ -158,12 +133,6 @@ But when the winter passes, the butterflies fly far away. The pot is so upset, a
       "/img/magic/P7___Mom_How_to_cook/v3_Mom_How_to_cook_zoomin_1080H@1.25x.jpg",
     ],
     mainColor: "#32CD32",
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
-    ],
   },
 
   {
@@ -179,12 +148,6 @@ But when the winter passes, the butterflies fly far away. The pot is so upset, a
     full: [
       "/img/magic/P8___You_are_my_princess/v3_You_are_my_princess_1080H@1.25x.jpg",
     ],
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
-    ],
   },
 
   {
@@ -199,12 +162,6 @@ But when the winter passes, the butterflies fly far away. The pot is so upset, a
     ],
     full: [
       "/img/magic/P9___Beautiful_sunrise/v3_Beautiful_sunrise_1080H@1.25x.jpg",
-    ],
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
     ],
   },
 
@@ -224,12 +181,6 @@ Feet tap!
     ],
     full: [
       "/img/magic/P10___Children_Party/v3_a_Childrens_party_1080H@1.25x.jpg",
-    ],
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
     ],
   },
 
@@ -251,12 +202,6 @@ With gently smiling jaws!
 
     square: ["/img/magic/P11___Crocodile/v2_CROCODILE_800x800@1.5x.jpg"],
     full: ["/img/magic/P11___Crocodile/v3_CROCODILE_1080H@1.25x.jpg"],
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
-    ],
   },
 
   {
@@ -267,12 +212,6 @@ With gently smiling jaws!
 
     square: ["/img/magic/P12___Dragon/v2_littledragon_800x800@2x.jpg"],
     full: ["/img/magic/P12___Dragon/v3_littledragon_1080H@1.25x.jpg"],
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
-    ],
   },
 
   {
@@ -288,12 +227,6 @@ With gently smiling jaws!
     full: [
       "/img/magic/P13___Mom_rain_on_your_shoulder/v3_mom_rainisonyourshoulder_1080H@1.25x.jpg",
     ],
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
-    ],
   },
 
   {
@@ -304,12 +237,6 @@ With gently smiling jaws!
 
     square: ["/img/magic/P14___Mouse/v2_mouse_on_my_head_800x800@1.5x.jpg"],
     full: ["/img/magic/P14___Mouse/v3_mouse_on_my_head_1080H@1.25x.jpg"],
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
-    ],
   },
 
   {
@@ -331,12 +258,6 @@ With gently smiling jaws!
       "/img/magic/P15___The_Rescue/v3_Zoom_inb/v3_TheRescue_4_1080H@1.25x.jpg",
       "/img/magic/P15___The_Rescue/v3_Zoom_inb/v3_TheRescue_5_1080H@1.25x.jpg",
     ],
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
-    ],
   },
 
   {
@@ -351,12 +272,6 @@ With gently smiling jaws!
     ],
     full: [
       "/img/magic/P16___Trina_Julie_flowers/v3_T_J_Flowers_1080H@1.25x.jpg",
-    ],
-    imgs: [
-      "/img/magicDetail/p5/2-dua-tam-hoa.jpg",
-      "/img/magicDetail/p5/Nang-tien-hoa.jpg",
-      "/img/magicDetail/p5/Ngoi-nghi-chut-nha.jpg",
-      "/img/magicDetail/p5/ngu-trong-hoa.jpg",
     ],
   },
 ];

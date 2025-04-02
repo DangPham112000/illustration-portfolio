@@ -8,9 +8,8 @@ import Home from "./pages/Home.jsx";
 import Magic from "./pages/Magic.jsx";
 import Life from "./pages/Life.jsx";
 import { NavBarProvider } from "./context/NavBarContext.jsx";
-import Abco from "./pages/Abco.jsx";
 import MagicDetail from "./pages/MagicDetail.jsx";
-import About2 from "./pages/About2.jsx";
+import About from "./pages/About.jsx";
 
 createRoot(document.getElementById("root")).render(
   <NavBarProvider>
@@ -20,8 +19,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="" element={<Home />} />
           <Route path="magic" element={<Magic />} />
           <Route path="life" element={<Life />} />
-          <Route path="abco" element={<Abco />} />
-          <Route path="about" element={<About2 />} />
+          <Route path="about" element={<About />} />
           <Route path="magicDetail/:id" element={<MagicDetail />} />
         </Route>
       </Routes>
