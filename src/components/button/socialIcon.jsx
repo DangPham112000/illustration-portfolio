@@ -51,5 +51,9 @@ export const BehanceIcon = ({ width }) => (
 );
 
 export const VimeoIcon = ({ width }) => (
-  <SocialIcon width={width} imgSrc="/img/icons/Vimeo.png" />
+  <SocialIcon
+    width={width}
+    href="https://vimeo.com/bongbenhcreative"
+    imgSrc="/img/icons/Vimeo.png"
+  />
 );
