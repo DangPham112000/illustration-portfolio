@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import ContactContent from "../components/ContactContent";
 import ModalContactMobile from "../components/ModalContactMobile";
 
-export default function About2() {
+export default function About() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       {/* About Section */}

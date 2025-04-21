@@ -34,15 +34,20 @@ export default function Navigation() {
       <nav ref={navRef} className="w-full">
         <div className="flex justify-between items-center sm:mx-[60px] ml-10 mr-5 sm:h-[112px] h-[56px]">
           {/* Page name */}
-          <div className="text-[32px] flex items-center">
-            <Link
-              to="/"
-              onClick={() => changePageHandling("/")}
-              className="font-medium font-logo"
-            >
-              <p>Ngoc Vo</p>
-            </Link>
-          </div>
+          <Link
+            to="/"
+            onClick={() => changePageHandling("/")}
+            className="h-full"
+          >
+            <img
+              src="/img/logo/NgocVo-WebLogo@3x.jpg"
+              className="lg:block hidden h-full w-auto"
+            />
+            <img
+              src="/img/logo/NgocVo-MobileLogo@3x.jpg"
+              className="lg:hidden block h-full w-auto"
+            />
+          </Link>
 
           {/* Desktop left nav */}
           <div className="hidden lg:block ">
