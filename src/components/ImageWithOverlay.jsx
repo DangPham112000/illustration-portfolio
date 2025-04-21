@@ -17,6 +17,7 @@ const ImageWithOverlay = ({
         src={imageUrl}
         alt={imageId}
         className="object-cover h-full w-full"
+        loading="lazy"
       />
       <div
         className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-90"

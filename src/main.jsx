@@ -2,25 +2,62 @@ import { createRoot } from "react-dom/client";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "./index.css";
-import App from "./App.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Magic from "./pages/Magic.jsx";
-import Life from "./pages/Life.jsx";
 import { NavBarProvider } from "./context/NavBarContext.jsx";
-import MagicDetail from "./pages/MagicDetail.jsx";
-import About from "./pages/About.jsx";
+import { lazy, Suspense } from "react";
+import App from "./App.jsx";
+
+const Home = lazy(() => import("./pages/Home.jsx"));
+const Magic = lazy(() => import("./pages/Magic.jsx"));
+const Life = lazy(() => import("./pages/Life.jsx"));
+const MagicDetail = lazy(() => import("./pages/MagicDetail.jsx"));
+const About = lazy(() => import("./pages/About.jsx"));
 
 createRoot(document.getElementById("root")).render(
   <NavBarProvider>
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="" element={<Home />} />
-          <Route path="magic" element={<Magic />} />
-          <Route path="life" element={<Life />} />
-          <Route path="about" element={<About />} />
-          <Route path="magicDetail/:id" element={<MagicDetail />} />
+          <Route
+            path=""
+            element={
+              <Suspense fallback={<div>loading...</div>}>
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="magic"
+            element={
+              <Suspense fallback={<div>loading...</div>}>
+                <Magic />
+              </Suspense>
+            }
+          />
+          <Route
+            path="life"
+            element={
+              <Suspense fallback={<div>loading...</div>}>
+                <Life />
+              </Suspense>
+            }
+          />
+          <Route
+            path="about"
+            element={
+              <Suspense fallback={<div>loading...</div>}>
+                <About />
+              </Suspense>
+            }
+          />
+          <Route
+            path="magicDetail/:id"
+            element={
+              <Suspense fallback={<div>loading...</div>}>
+                <MagicDetail />
+              </Suspense>
+            }
+          />
         </Route>
       </Routes>
     </Router>

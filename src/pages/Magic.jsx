@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavBar } from "../context/NavBarContext";
 import ImageWithOverlay from "../components/ImageWithOverlay";
 import magicCollection from "../data/magicCollection";
-import Copyright from "../components/Copyright";
 import Line from "../components/Line";
 import ArrowDown from "../components/button/ArrowDown";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";

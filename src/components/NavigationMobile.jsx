@@ -13,14 +13,6 @@ export default function NavigationMobile({ currentPage }) {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    // window.addEventListener("resize", () => {
-    //   const pageHeight = document.documentElement.scrollHeight;
-    //   console.log("Current page height:", pageHeight, navBarHeight);
-    // });
-    console.log(ref, document.querySelector('#root').clientHeight);
-  }, [navBarHeight, ref, isOpen]);
-
   return (
     <>
       {/* Button */}
