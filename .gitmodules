@@ -1,0 +1,4 @@
+[submodule "dist"]
+	path = dist
+	url = git@github.com:DangPham112000/illustration-portfolio-prod.git main
+	branch = main
