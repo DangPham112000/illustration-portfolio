@@ -21,7 +21,6 @@ export default function Life() {
 
   return (
     <>
-      <Line />
       <div className="flex flex-1 flex-col items-center">
         {/* Introduce */}
         <div className="flex flex-col items-start justify-center sm:gap-[30px] gap-5 lg:px-[60px] sm:px-[40px] sm:pb-[50px] sm:pt-[60px] py-[30px] px-10 w-full">

@@ -31,12 +31,12 @@ export default function About() {
           />
 
           <div className="flex flex-col lg:gap-[10px] sm:gap-5 gap-[10px] lg:px-[30px] sm:text-[17px] text-[16px] sm:leading-[21px] leading-tight">
-            <h1 className="lg:text-[28px] sm:text-[24px] text-[16px]">
+            <h1 className="lg:text-[28px] sm:text-[24px] text-[16px] font-normal">
               Hello!
             </h1>
             <p>
               I'm Ngoc Vo, a Graphic Designer, Illustrator, and now, a rising
-              ceramic artists too!
+              ceramic artist too!
             </p>
             <p>
               From a young age, I explored different art mediums like watercolor
@@ -82,7 +82,7 @@ export default function About() {
           <div className="flex items-center justify-center w-[58px] aspect-square">
             <GoArrowDown className="w-[45px] h-[45px]" />
           </div>
-          <h1 className="text-[28px]">Contact me</h1>
+          <h1 className="text-[28px]">Get in touch</h1>
         </div>
         <Line />
       </div>

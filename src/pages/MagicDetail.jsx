@@ -59,16 +59,16 @@ export default function MagicDetail() {
 
           {/* Content + Button */}
           <div
-            className="lg:w-2/3 sm:w-2/3 self-center lg:pl-[30px] sm:p-0 px-10 flex flex-col sm:justify-between gap-[30px]"
+            className="lg:w-full sm:w-2/3 self-center lg:pl-[30px] sm:p-0 px-10 flex flex-col sm:justify-between gap-[30px]"
             style={{ height: secondColumnHeight }}
           >
             {/* Content  */}
-            <div className="overflow-y-auto flex flex-col gap-[30px]">
-              <h2 className="sm:font-bold font-semibold sm:text-[32px] text-[21px] leading-tight w-full">
+            <div className="overflow-y-auto w-full flex flex-col gap-[30px]">
+              <h2 className="lg:w-2/3 sm:w-full sm:font-bold font-semibold sm:text-[32px] text-[21px] leading-tight w-full">
                 {magicItem.title}
               </h2>
 
-              <pre className="sm:text-[17px] text-[16px] sm:leading-[21px] leading-tight whitespace-pre-wrap font-sans">
+              <pre className="lg:w-2/3 sm:w-full sm:text-[17px] text-[16px] sm:leading-[21px] leading-tight whitespace-pre-wrap font-sans">
                 {magicItem.description}
               </pre>
             </div>
@@ -109,19 +109,17 @@ export default function MagicDetail() {
 
           <div className="lg:block hidden"></div>
 
-          <div className="sm:w-2/3 lg:mt-0 sm:mt-[30px] self-center">
-            <button className="sm:flex hidden items-center justify-center w-fit p-5 lg:ml-[30px] box-border border-black border-[1px] bg-black text-white hover:bg-white hover:text-black transform duration-500">
-              <Link to="/magic" className="text-[17px]">
+          <Link to="/magic" className="text-[17px] font-normal">
+            <div className="sm:w-2/3 lg:mt-0 sm:mt-[30px] self-center">
+              <button className="sm:flex hidden items-center justify-center w-fit p-5 lg:ml-[30px] box-border border-black border-[1px] bg-black text-white hover:bg-white hover:text-black transform duration-500">
                 Back to Magic world
-              </Link>
-            </button>
-          </div>
+              </button>
+            </div>
+          </Link>
 
           {/* Mobile Slider */}
           <div className="sm:hidden block w-full h-full mt-[30px]">
-            <MagicSliderMobile
-              imgSrcs={magicItem.square}
-            />
+            <MagicSliderMobile imgSrcs={magicItem.square} />
           </div>
         </div>
       </div>

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-weight: 300; /* default weight */
+  }
+}
+
 /* index.css or a global CSS file */
 ::-webkit-scrollbar {
   width: 8px; /* Width of the scrollbar */
@@ -9,6 +15,8 @@
 
 ::-webkit-scrollbar-track {
   background: transparent; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  border: 1.5px solid #888; /* Adding a 1px gray outline */
 }
 
 ::-webkit-scrollbar-thumb {
