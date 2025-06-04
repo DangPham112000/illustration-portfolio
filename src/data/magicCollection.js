@@ -274,4 +274,20 @@ With gently smiling jaws!
       "/img/magic/P16___Trina_Julie_flowers/v3_T_J_Flowers_1080H@1.25x.jpg",
     ],
   },
+
+  {
+    id: "p17",
+    title: "Flowers and us",
+    description: `123Yay yay yay! Let's go pick some flowers. Harvest season is here!`,
+    priImg:
+      "/img/magic/P16___Trina_Julie_flowers/v1_T_J_Flowers_800x800px@1.5x.jpg",
+
+    square: [
+      "/img/magic/P16___Trina_Julie_flowers/v1_T_J_Flowers_800x800px@1.5x.jpg",
+      "/img/magic/P16___Trina_Julie_flowers/v1_T_J_Flowers_800x800px@1.5x.jpg",
+    ],
+    full: [
+      "/img/magic/P17_123/ceramic.jpg",
+    ],
+  },
 ];
