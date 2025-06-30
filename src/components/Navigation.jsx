@@ -31,12 +31,16 @@ export default function Navigation() {
   };
 
   const getMenuCss = (link) => {
-    return currentPage === link
-      ? {
-          borderBottomWidth: "2px",
-          marginBottom: "-2px",
-          borderColor: "black",
-        }
+    const activeStyle = {
+      borderBottomWidth: "2px",
+      marginBottom: "-2px",
+      borderColor: "black",
+    };
+
+    return (link === "projects" &&
+      (currentPage === "/magic" || currentPage === "/life")) ||
+      currentPage === link
+      ? activeStyle
       : {};
   };
 
@@ -55,7 +59,7 @@ export default function Navigation() {
               className="lg:block hidden h-full w-auto"
             />
             <img
-              src="/img/logo/NgocVo-MobileLogo@3x.jpg"
+              src="/img/logo/NgocVo-MobileLogo@3x-2.jpg"
               className="lg:hidden block h-full w-auto"
             />
           </Link>
@@ -75,23 +79,29 @@ export default function Navigation() {
                   </HashLink>
                 </li>
                 <li className="relative group">
-                  <div className="flex justify-center text-[17px] px-1 hover:border-b-2 hover:border-black hover:-mb-[2px] cursor-pointer group-hover:text-gray-400">
-                    <p>Projects</p>
+                  <div
+                    className="flex justify-center text-[17px] px-1 hover:border-b-2 hover:border-black hover:-mb-[2px] cursor-pointer group-hover:text-gray-400"
+                    style={getMenuCss("projects")}
+                  >
+                    Projects
                   </div>
-                  <ul className="absolute left-0 pt-[10px] w-[155px] gap-[10px] bg-transparent hidden group-hover:flex flex-col z-10">
-                    <li className="" onClick={() => changePageHandling("/magic")}>
+                  <ul className="absolute left-[-10px] pl-[10px] pr-[20px] py-[12px] w-fit gap-[10px] bg-white hidden group-hover:flex flex-col z-10">
+                    <li
+                      className="w-fit whitespace-nowrap"
+                      onClick={() => changePageHandling("/magic")}
+                    >
                       <HashLink
                         to="/magic"
-                        className="flex justify-start text-[17px] px-1 hover:border-b-2 hover:border-black hover:-mb-[2px] w-fit"
+                        className="flex justify-start text-[17px] px-1 hover:border-b-2 hover:border-black hover:-mb-[2px] w-fit whitespace-nowrap"
                         style={getMenuCss("/magic")}
                       >
-                        Magic and Fairy
+                        Magic & Fairy
                       </HashLink>
                     </li>
                     <li onClick={() => changePageHandling("/life")}>
                       <HashLink
                         to="/life"
-                        className="flex justify-start text-[17px] px-1 hover:border-b-2 hover:border-black hover:-mb-[2px] w-fit"
+                        className="flex justify-start text-[17px] px-1 hover:border-b-2 hover:border-black hover:-mb-[2px] w-fit whitespace-nowrap"
                         style={getMenuCss("/life")}
                       >
                         Life drawings
@@ -130,7 +140,8 @@ export default function Navigation() {
           {/* Mobile left nav */}
           <div className="sm:hidden flex items-center gap-5">
             <div className="flex items-center gap-[15px]">
-              <FacebookLiteIcon width={25} />
+              <BehanceIcon width={29} />
+              {/* <FacebookLiteIcon width={25} /> */}
               <InstagramLiteIcon width={29} />
             </div>
 

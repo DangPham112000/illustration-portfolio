@@ -53,7 +53,7 @@ export default function Magic() {
               <div className="w-[90px]">
                 <Line />
               </div>
-              <p className="font-medium 3xl:w-[426px] w-full text-[17px] leading-[21px]">
+              <p className="3xl:w-[426px] w-full text-[17px] leading-[21px]">
                 Fairy tales have sparked my imagination and inspired the themes
                 of my artworks. I hope you can find hope and happiness through
                 my illustrations and drawings.

@@ -14,7 +14,7 @@ export default function Footer() {
         <Line />
       </div>
       <div className="flex gap-[15px]">
-        <FacebookIcon />
+        {/* <FacebookIcon /> */}
         <InstagramIcon />
         <BehanceIcon />
         <VimeoIcon />

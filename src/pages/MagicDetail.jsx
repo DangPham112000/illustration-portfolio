@@ -107,19 +107,54 @@ export default function MagicDetail() {
             </div>
           </div>
 
+          {/* Blank element to arrange the grid */}
           <div className="lg:block hidden"></div>
 
-          <Link to="/magic" className="text-[17px] font-normal">
-            <div className="sm:w-2/3 lg:mt-0 sm:mt-[30px] self-center">
-              <button className="sm:flex hidden items-center justify-center w-fit p-5 lg:ml-[30px] box-border border-black border-[1px] bg-black text-white hover:bg-white hover:text-black transform duration-500">
-                Back to Magic world
-              </button>
-            </div>
-          </Link>
+          <div className="sm:w-2/3 lg:mt-0 sm:mt-[30px] self-center">
+            <Link
+              to="/magic"
+              className="sm:flex hidden items-center justify-center w-fit p-5 lg:ml-[30px] box-border border-black border-[1px] bg-black text-white hover:bg-white hover:text-black transform duration-500 text-[17px] font-normal"
+            >
+              <button className="">Back to Magic world</button>
+            </Link>
+          </div>
 
           {/* Mobile Slider */}
           <div className="sm:hidden block w-full h-full mt-[30px]">
             <MagicSliderMobile imgSrcs={magicItem.square} />
+          </div>
+
+          {/* Mobile Prev - Next Btn */}
+          <div className="sm:hidden flex justify-center gap-5 pt-[21px]">
+            <button>
+              <Link
+                to={`/magicDetail/${
+                  currentIndex === 0
+                    ? magicCollection[magicCollection.length - 1].id
+                    : magicCollection[currentIndex - 1].id
+                }`}
+                className="text-[17px] font-medium underline hover:text-[#FF5900] transform duration-500"
+                onClick={prevHandling}
+              >
+                Previous
+              </Link>
+            </button>
+            <span className="font-inter text-[17px] font-semibold flex items-center">
+              |
+            </span>
+            <button>
+              <Link
+                to={`/magicDetail/${
+                  currentIndex + 1 === magicCollection.length
+                    ? magicCollection[0].id
+                    : magicCollection[currentIndex + 1].id
+                }`}
+                className="text-[17px] font-medium underline hover:text-[#FF5900] transform duration-500"
+                onClick={nextHandling}
+              >
+                Next
+              </Link>
+            </button>
           </div>
         </div>
       </div>
