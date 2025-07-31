@@ -1,6 +1,5 @@
 export default [
   "1_Trina_with_Cow.jpg",
-  "2_JuliewithCow.jpg",
   "3_JuliewithCow_BG3.jpg",
   "4_An_birthday.jpg",
   "5_Bi_Flower_FA.jpg",

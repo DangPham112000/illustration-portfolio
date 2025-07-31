@@ -28,10 +28,7 @@ export default function Life() {
             Capturing life
           </h3>
           <p className="lg:w-1/2 sm:w-2/3 w-full">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            To me, life is beautiful - even in ordinary moments. My heart fills with happiness through lines of poetry, and photos I capture while traveling and exploring new places.
           </p>
         </div>
 
