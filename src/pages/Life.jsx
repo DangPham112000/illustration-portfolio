@@ -28,7 +28,7 @@ export default function Life() {
             Capturing life
           </h3>
           <p className="lg:w-1/2 sm:w-2/3 w-full">
-            To me, life is beautiful - even in ordinary moments. My heart fills with happiness through lines of poetry, and photos I capture while traveling and exploring new places.
+            To me, life is beautiful - even in ordinary moments. My heart fills with happiness through lines of poetry, and photos I capture while traveling and exploring new places
           </p>
         </div>
 
