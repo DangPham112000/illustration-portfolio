@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import { useNavBar } from "../context/NavBarContext";
 import { menuList } from "../data/menuList";
 
-export default function NavigationMobile({ currentPage }) {
+export default function NavigationMobile({ currentPage, changePageHandling }) {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);
   const { navBarHeight } = useNavBar();
@@ -40,22 +40,37 @@ export default function NavigationMobile({ currentPage }) {
                 {menuList.map((item) => {
                   return (
                     <li key={item.id}>
-                      <HashLink
-                        onClick={() => setIsOpen(false)}
-                        to={item.link}
-                        className="inline-block text-white text-[28px]"
-                        style={
-                          currentPage === item.link
-                            ? {
-                                borderBottomWidth: "2px",
-                                marginBottom: "-2px",
-                                borderColor: "white",
-                              }
-                            : {}
-                        }
-                      >
-                        {item.title}
-                      </HashLink>
+                      {item.external ? (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setIsOpen(false)}
+                          className="inline-block text-white text-[28px]"
+                        >
+                          {item.title}
+                        </a>
+                      ) : (
+                        <HashLink
+                          onClick={() => {
+                            setIsOpen(false);
+                            changePageHandling(item.link);
+                          }}
+                          to={item.link}
+                          className="inline-block text-white text-[28px]"
+                          style={
+                            currentPage === item.link
+                              ? {
+                                  borderBottomWidth: "2px",
+                                  marginBottom: "-2px",
+                                  borderColor: "white",
+                                }
+                              : {}
+                          }
+                        >
+                          {item.title}
+                        </HashLink>
+                      )}
                     </li>
                   );
                 })}

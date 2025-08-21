@@ -118,6 +118,16 @@ export default function Navigation() {
                     <p>About me</p>
                   </HashLink>
                 </li>
+                <li>
+                  <a
+                    href="https://substack.com/@ngocvo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex justify-center text-[17px] px-1 hover:border-b-2 hover:border-black hover:-mb-[2px]"
+                  >
+                    <p>Blog</p>
+                  </a>
+                </li>
               </ul>
 
               {/* Social icons */}
@@ -130,7 +140,7 @@ export default function Navigation() {
           </div>
 
           {/* Ipad left nav */}
-          <NavigationIpad currentPage={currentPage} />
+          <NavigationIpad currentPage={currentPage} changePageHandling={changePageHandling} />
           <div className="lg:hidden sm:flex hidden gap-4">
             {/* <FacebookIcon /> */}
             <BehanceIcon />
@@ -145,7 +155,7 @@ export default function Navigation() {
               <InstagramLiteIcon width={29} />
             </div>
 
-            <NavigationMobile currentPage={currentPage} />
+            <NavigationMobile currentPage={currentPage} changePageHandling={changePageHandling} />
           </div>
         </div>
       </nav>

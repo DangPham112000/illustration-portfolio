@@ -19,4 +19,10 @@ export const menuList = [
     title: "About",
     link: "/about",
   },
+  {
+    id: "blog",
+    title: "Blog",
+    link: "https://substack.com/@ngocvo",
+    external: true,
+  },
 ];
